@@ -1,0 +1,326 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Juan y Laura\simulation\modelsim
+Ecalcparidad
+Z1 w1549705998
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Juan y Laura\simulation\modelsim
+Z5 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/calcparidad.vhd
+Z6 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/calcparidad.vhd
+l0
+L4
+VkgjTQ8ze>CW?n>4S<oI@91
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1549709748.838000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/calcparidad.vhd|
+Z10 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/calcparidad.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 g;1i0Ul55W7C1:Ed8IifT3
+!i10b 1
+Abehavioural
+R2
+R3
+DEx4 work 11 calcparidad 0 22 kgjTQ8ze>CW?n>4S<oI@91
+l13
+L11
+VE1jKY:i8@ePRaz7E4bF?g1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 Lm9dMRJ[lzM;4QLZfM>?L2
+!i10b 1
+Econtador1bit
+Z13 w1549706020
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contador1bit.vhd
+Z16 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contador1bit.vhd
+l0
+L5
+Vj9];dhLDnSmEd4`EK]1N=3
+R7
+31
+Z17 !s108 1549709748.526000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contador1bit.vhd|
+Z19 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contador1bit.vhd|
+R11
+R12
+!s100 HRXKX[=OlbTi_3D=AB]ib0
+!i10b 1
+Abehavioural
+R14
+R2
+R3
+DEx4 work 12 contador1bit 0 22 j9];dhLDnSmEd4`EK]1N=3
+l14
+L12
+VJmMUILGK1K>5hV`R31OEF1
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 J=dTGAdClPoL0b56Q5X=:3
+!i10b 1
+Econtadorregistro
+Z20 w1549706022
+R14
+R2
+R3
+R4
+Z21 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contadorregistro.vhd
+Z22 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contadorregistro.vhd
+l0
+L5
+VGT65Ko8UK62Rb`aUA0mBk0
+R7
+31
+Z23 !s108 1549709748.435000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contadorregistro.vhd|
+Z25 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/contadorregistro.vhd|
+R11
+R12
+!s100 hOc]:?]NVCRJ>mIL4Kn4Y2
+!i10b 1
+Abehavioural
+R14
+R2
+R3
+DEx4 work 16 contadorregistro 0 22 GT65Ko8UK62Rb`aUA0mBk0
+l14
+L12
+V5[FG<Z>BY4zA^7>QCz^l90
+R7
+31
+R23
+R24
+R25
+R11
+R12
+!s100 <:f`CE]^PY6SMVg:_JEBm0
+!i10b 1
+Econtrol
+Z26 w1549706026
+R2
+R3
+R4
+Z27 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/control.vhd
+Z28 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/control.vhd
+l0
+L4
+V>8QQgh_<7><4RPRoTfzPj1
+R7
+31
+Z29 !s108 1549709748.619000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/control.vhd|
+Z31 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/control.vhd|
+R11
+R12
+!s100 ;M?oo[[_GGn>fz4K2OJ_B2
+!i10b 1
+Abehavioural
+R2
+R3
+DEx4 work 7 control 0 22 >8QQgh_<7><4RPRoTfzPj1
+l17
+L14
+VV]ndSCRM56B`lU^Z2<ajo3
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 CHjdERS3YzaX?en<5<L4=2
+!i10b 1
+Edetectorflanco
+Z32 w1549706028
+R2
+R3
+R4
+Z33 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/detectorflanco.vhd
+Z34 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/detectorflanco.vhd
+l0
+L4
+VIbF9k9?0Pce;0lZInZCbZ0
+R7
+31
+Z35 !s108 1549709748.345000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/detectorflanco.vhd|
+Z37 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/detectorflanco.vhd|
+R11
+R12
+!s100 EaJ^``JcT3ZG<7=eQ=:750
+!i10b 1
+Abehavioural
+R2
+R3
+DEx4 work 14 detectorflanco 0 22 IbF9k9?0Pce;0lZInZCbZ0
+l15
+L12
+V@S3l4B[CHRDGVLRHSOU9Y3
+R7
+31
+R35
+R36
+R37
+R11
+R12
+!s100 2]]FHVWXi=R@agT:_i[QZ3
+!i10b 1
+Eemisorserie
+Z38 w1549706030
+R2
+R3
+R4
+Z39 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/emisorserie.vhd
+Z40 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/emisorserie.vhd
+l0
+L4
+VSI^bZ>EIM_l[G56JTmejX1
+R7
+31
+Z41 !s108 1549709748.255000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/emisorserie.vhd|
+Z43 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/emisorserie.vhd|
+R11
+R12
+!s100 WHVWYd_PXND^?[Q0;9L9G2
+!i10b 1
+Astructural
+R2
+R3
+DEx4 work 11 emisorserie 0 22 SI^bZ>EIM_l[G56JTmejX1
+l70
+L12
+VV5fZMTin4HS7OPRb4MYhc1
+R7
+31
+R41
+R42
+R43
+R11
+R12
+!s100 hG^BO^fPcBkQMQ59Pcah53
+!i10b 1
+Eemisorserie_vhd_tst
+Z44 w1549709912
+R14
+R2
+R3
+R4
+Z45 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/simulation/modelsim/EmisorSerie.vht
+Z46 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/simulation/modelsim/EmisorSerie.vht
+l0
+L31
+VBRj00<H3DUU=Q:k3Y:giD2
+!s100 h22<mH26AX25J5fmBA<CL0
+R7
+32
+!i10b 1
+Z47 !s108 1549709917.793000
+Z48 !s90 -reportprogress|300|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/simulation/modelsim/EmisorSerie.vht|
+Z49 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/simulation/modelsim/EmisorSerie.vht|
+Z50 o-work work -O0
+R12
+Aemisorserie_arch
+R14
+R2
+R3
+DEx4 work 19 emisorserie_vhd_tst 0 22 BRj00<H3DUU=Q:k3Y:giD2
+l51
+L33
+VojX?<D^]TFb3ZW;K5BK`=0
+!s100 fJQ<K`gKHn5E?McTI=ZQ_0
+R7
+32
+!i10b 1
+R47
+R48
+R49
+R50
+R12
+Emuxemi
+Z51 w1549706042
+R2
+R3
+R4
+Z52 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/muxemi.vhd
+Z53 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/muxemi.vhd
+l0
+L4
+V5m?zd47_z5j0hR0TTVdGY2
+R7
+31
+Z54 !s108 1549709748.929000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/muxemi.vhd|
+Z56 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/muxemi.vhd|
+R11
+R12
+!s100 lGcec7z5[HPcUdQNdmV0Z3
+!i10b 1
+Abehavioural
+R2
+R3
+DEx4 work 6 muxemi 0 22 5m?zd47_z5j0hR0TTVdGY2
+l16
+L15
+V_`5@:cX[Q[da?ITB`BZH:2
+R7
+31
+R54
+R55
+R56
+R11
+R12
+!s100 h_dd>Ne[n1l^0bK]kQKz?3
+!i10b 1
+Eregdesp
+Z57 w1549709127
+R2
+R3
+R4
+Z58 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/regdesp.vhd
+Z59 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/regdesp.vhd
+l0
+L4
+VBAPlEE[?K[5D0X9icT?3C2
+R7
+31
+Z60 !s108 1549709748.726000
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/regdesp.vhd|
+Z62 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Juan y Laura/regdesp.vhd|
+R11
+R12
+!s100 7j>Ic3B7eeN1fcS`T?BmM1
+!i10b 1
+Abehavioural
+R2
+R3
+DEx4 work 7 regdesp 0 22 BAPlEE[?K[5D0X9icT?3C2
+l15
+L13
+VTgmajOeYDF7:^A_k1GHDf2
+R7
+31
+R60
+R61
+R62
+R11
+R12
+!s100 ;B0NHBaTaO=?JL]k<T<a:2
+!i10b 1

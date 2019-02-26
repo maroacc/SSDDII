@@ -1,0 +1,1125 @@
+TimeQuest Timing Analyzer report for ReceptorSerie
+Sun Jan 27 20:08:14 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; ReceptorSerie                                      ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 248.26 MHz ; 248.26 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.028 ; -74.239       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -61.509               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                ;
++--------+--------------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.028 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.065      ;
+; -3.028 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 4.065      ;
+; -2.892 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.929      ;
+; -2.892 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.929      ;
+; -2.862 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.899      ;
+; -2.862 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.899      ;
+; -2.841 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.878      ;
+; -2.841 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.878      ;
+; -2.840 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.878      ;
+; -2.840 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.878      ;
+; -2.821 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.858      ;
+; -2.821 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.858      ;
+; -2.813 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.850      ;
+; -2.813 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.850      ;
+; -2.812 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.850      ;
+; -2.812 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.850      ;
+; -2.745 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.782      ;
+; -2.745 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.782      ;
+; -2.719 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.757      ;
+; -2.719 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.757      ;
+; -2.715 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.753      ;
+; -2.715 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.753      ;
+; -2.705 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.742      ;
+; -2.694 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.732      ;
+; -2.694 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.732      ;
+; -2.673 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.710      ;
+; -2.673 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.710      ;
+; -2.658 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.695      ;
+; -2.658 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.695      ;
+; -2.644 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.681      ;
+; -2.644 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.681      ;
+; -2.631 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.668      ;
+; -2.615 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.653      ;
+; -2.615 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.653      ;
+; -2.592 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.000      ; 3.630      ;
+; -2.589 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.626      ;
+; -2.589 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.626      ;
+; -2.564 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.602      ;
+; -2.564 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.602      ;
+; -2.543 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.581      ;
+; -2.543 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.581      ;
+; -2.523 ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.561      ;
+; -2.523 ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.561      ;
+; -2.517 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.554      ;
+; -2.517 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.554      ;
+; -2.508 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.545      ;
+; -2.501 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.538      ;
+; -2.501 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.538      ;
+; -2.495 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.532      ;
+; -2.483 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.520      ;
+; -2.483 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.520      ;
+; -2.481 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.518      ;
+; -2.481 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 3.518      ;
+; -2.475 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.513      ;
+; -2.475 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.513      ;
+; -2.423 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.461      ;
+; -2.395 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.433      ;
+; -2.368 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.406      ;
+; -2.368 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.406      ;
+; -2.365 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.402      ;
+; -2.363 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.400      ;
+; -2.348 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.385      ;
+; -2.347 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.384      ;
+; -2.345 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.000      ; 3.383      ;
+; -2.344 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.382      ;
+; -2.318 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.356      ;
+; -2.318 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.356      ;
+; -2.314 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.351      ;
+; -2.309 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.347      ;
+; -2.309 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.347      ;
+; -2.309 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.347      ;
+; -2.309 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.347      ;
+; -2.307 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.345      ;
+; -2.303 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.341      ;
+; -2.303 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.341      ;
+; -2.278 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.316      ;
+; -2.278 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.316      ;
+; -2.270 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.308      ;
+; -2.267 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.305      ;
+; -2.261 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.298      ;
+; -2.258 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.296      ;
+; -2.255 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.000      ; 3.293      ;
+; -2.247 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.285      ;
+; -2.230 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.268      ;
+; -2.226 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.264      ;
+; -2.226 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.264      ;
+; -2.217 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.255      ;
+; -2.203 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.000      ; 3.241      ;
+; -2.184 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.222      ;
+; -2.184 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.222      ;
+; -2.184 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.222      ;
+; -2.184 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.222      ;
+; -2.182 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.220      ;
+; -2.179 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.217      ;
+; -2.174 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 3.211      ;
+; -2.162 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.200      ;
+; -2.162 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 3.200      ;
+; -2.140 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.178      ;
+; -2.102 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.140      ;
+; -2.099 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.137      ;
++--------+--------------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; ContadorM8:ContadorM8_i|contador[0]                          ; ContadorM8:ContadorM8_i|contador[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; ContadorM8:ContadorM8_i|contador[1]                          ; ContadorM8:ContadorM8_i|contador[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; ContadorM8:ContadorM8_i|contador[2]                          ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; DetErrorParidad:DetErrorParidad_i|paridad                    ; DetErrorParidad:DetErrorParidad_i|paridad                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; DetErrorParidad:DetErrorParidad_i|error                      ; DetErrorParidad:DetErrorParidad_i|error                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.620 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.906      ;
+; 0.622 ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.908      ;
+; 0.625 ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.911      ;
+; 0.626 ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.912      ;
+; 0.627 ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.913      ;
+; 0.633 ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; clk          ; clk         ; 0.000        ; 0.000      ; 0.919      ;
+; 0.634 ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.920      ;
+; 0.877 ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.164      ;
+; 0.878 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.163      ;
+; 0.880 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; clk          ; clk         ; 0.000        ; -0.001     ; 1.165      ;
+; 0.883 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; DetErrorParidad:DetErrorParidad_i|error                      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.168      ;
+; 0.910 ; DetErrorParidad:DetErrorParidad_i|error                      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.196      ;
+; 0.911 ; DetectorFlanco:DetectorFlanco_i|estado_act.Esp1              ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.197      ;
+; 0.968 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.254      ;
+; 0.970 ; DetErrorParidad:DetErrorParidad_i|error                      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.256      ;
+; 0.975 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.261      ;
+; 0.976 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.981 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.267      ;
+; 0.981 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.267      ;
+; 0.984 ; ContadorM8:ContadorM8_i|contador[1]                          ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.270      ;
+; 0.999 ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.285      ;
+; 1.000 ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.286      ;
+; 1.006 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.292      ;
+; 1.011 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.012 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.014 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.300      ;
+; 1.015 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.016 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.302      ;
+; 1.023 ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.025 ; ContadorM8:ContadorM8_i|contador[0]                          ; ContadorM8:ContadorM8_i|contador[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.311      ;
+; 1.029 ; ContadorM8:ContadorM8_i|contador[0]                          ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.315      ;
+; 1.147 ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.432      ;
+; 1.153 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; ContadorM8:ContadorM8_i|contador[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.439      ;
+; 1.157 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.443      ;
+; 1.309 ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.596      ;
+; 1.400 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.686      ;
+; 1.406 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.692      ;
+; 1.407 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.693      ;
+; 1.439 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.725      ;
+; 1.448 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.453 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.739      ;
+; 1.491 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.777      ;
+; 1.493 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.779      ;
+; 1.503 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.789      ;
+; 1.504 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.790      ;
+; 1.505 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.791      ;
+; 1.509 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.795      ;
+; 1.524 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.810      ;
+; 1.526 ; DetErrorParidad:DetErrorParidad_i|paridad                    ; DetErrorParidad:DetErrorParidad_i|error                      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.811      ;
+; 1.528 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.814      ;
+; 1.529 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.815      ;
+; 1.534 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.819      ;
+; 1.560 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.846      ;
+; 1.568 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.854      ;
+; 1.576 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.862      ;
+; 1.580 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.866      ;
+; 1.586 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.872      ;
+; 1.588 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.874      ;
+; 1.589 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.875      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.591 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.877      ;
+; 1.598 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.883      ;
+; 1.598 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.883      ;
+; 1.598 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.883      ;
+; 1.599 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.885      ;
+; 1.604 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.890      ;
+; 1.604 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.890      ;
+; 1.606 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.609 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.895      ;
+; 1.619 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.905      ;
+; 1.619 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.905      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; ContadorM8:ContadorM8_i|contador[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; DetErrorParidad:DetErrorParidad_i|paridad                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.624 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.628 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.914      ;
+; 1.633 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.919      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                         ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[0]                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[0]                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[1]                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[1]                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[2]                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[2]                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|error                      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|error                      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|paridad                    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|paridad                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Esp1              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Esp1              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Registra         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Registra         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ContadorM8_i|contador[0]|clk                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; e_s       ; clk        ; 4.569 ; 4.569 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; e_s       ; clk        ; -3.500 ; -3.500 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; led_error_paridad ; clk        ; 6.874 ; 6.874 ; Rise       ; clk             ;
+; led_error_trama   ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+; s_p[*]            ; clk        ; 7.444 ; 7.444 ; Rise       ; clk             ;
+;  s_p[0]           ; clk        ; 7.444 ; 7.444 ; Rise       ; clk             ;
+;  s_p[1]           ; clk        ; 7.184 ; 7.184 ; Rise       ; clk             ;
+;  s_p[2]           ; clk        ; 7.209 ; 7.209 ; Rise       ; clk             ;
+;  s_p[3]           ; clk        ; 7.206 ; 7.206 ; Rise       ; clk             ;
+;  s_p[4]           ; clk        ; 7.151 ; 7.151 ; Rise       ; clk             ;
+;  s_p[5]           ; clk        ; 6.874 ; 6.874 ; Rise       ; clk             ;
+;  s_p[6]           ; clk        ; 6.896 ; 6.896 ; Rise       ; clk             ;
+;  s_p[7]           ; clk        ; 6.845 ; 6.845 ; Rise       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; led_error_paridad ; clk        ; 6.874 ; 6.874 ; Rise       ; clk             ;
+; led_error_trama   ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+; s_p[*]            ; clk        ; 6.845 ; 6.845 ; Rise       ; clk             ;
+;  s_p[0]           ; clk        ; 7.444 ; 7.444 ; Rise       ; clk             ;
+;  s_p[1]           ; clk        ; 7.184 ; 7.184 ; Rise       ; clk             ;
+;  s_p[2]           ; clk        ; 7.209 ; 7.209 ; Rise       ; clk             ;
+;  s_p[3]           ; clk        ; 7.206 ; 7.206 ; Rise       ; clk             ;
+;  s_p[4]           ; clk        ; 7.151 ; 7.151 ; Rise       ; clk             ;
+;  s_p[5]           ; clk        ; 6.874 ; 6.874 ; Rise       ; clk             ;
+;  s_p[6]           ; clk        ; 6.896 ; 6.896 ; Rise       ; clk             ;
+;  s_p[7]           ; clk        ; 6.845 ; 6.845 ; Rise       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.610 ; -6.029        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -50.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                ;
++--------+--------------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.610 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.610 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.641      ;
+; -0.558 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.589      ;
+; -0.558 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.589      ;
+; -0.550 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.583      ;
+; -0.550 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.583      ;
+; -0.550 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.581      ;
+; -0.550 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.581      ;
+; -0.547 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.580      ;
+; -0.547 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.580      ;
+; -0.546 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.577      ;
+; -0.546 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.577      ;
+; -0.537 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.568      ;
+; -0.537 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.568      ;
+; -0.506 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.537      ;
+; -0.506 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.537      ;
+; -0.501 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.534      ;
+; -0.501 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.534      ;
+; -0.489 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.520      ;
+; -0.489 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.520      ;
+; -0.484 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.516      ;
+; -0.483 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.515      ;
+; -0.483 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.515      ;
+; -0.482 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.513      ;
+; -0.482 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.513      ;
+; -0.479 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.510      ;
+; -0.479 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.510      ;
+; -0.469 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.500      ;
+; -0.469 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.500      ;
+; -0.444 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.475      ;
+; -0.444 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.475      ;
+; -0.436 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.468      ;
+; -0.436 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.468      ;
+; -0.433 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.466      ;
+; -0.433 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.466      ;
+; -0.432 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.465      ;
+; -0.432 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.465      ;
+; -0.425 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.456      ;
+; -0.425 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.456      ;
+; -0.424 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.456      ;
+; -0.424 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.456      ;
+; -0.421 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.452      ;
+; -0.421 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.452      ;
+; -0.414 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.445      ;
+; -0.414 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.445      ;
+; -0.398 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.429      ;
+; -0.396 ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.428      ;
+; -0.396 ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.428      ;
+; -0.393 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.424      ;
+; -0.393 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; -0.001     ; 1.424      ;
+; -0.374 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.407      ;
+; -0.374 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.407      ;
+; -0.365 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.396      ;
+; -0.337 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.369      ;
+; -0.337 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.369      ;
+; -0.337 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.369      ;
+; -0.326 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.358      ;
+; -0.326 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.358      ;
+; -0.322 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.000      ; 1.354      ;
+; -0.321 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.352      ;
+; -0.318 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.350      ;
+; -0.311 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.343      ;
+; -0.311 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.343      ;
+; -0.304 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.336      ;
+; -0.299 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.332      ;
+; -0.299 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.001      ; 1.332      ;
+; -0.292 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.323      ;
+; -0.282 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.315      ;
+; -0.282 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.315      ;
+; -0.282 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.315      ;
+; -0.282 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.315      ;
+; -0.280 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.313      ;
+; -0.280 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.312      ;
+; -0.278 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.310      ;
+; -0.273 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.304      ;
+; -0.272 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.304      ;
+; -0.272 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.304      ;
+; -0.269 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.301      ;
+; -0.266 ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]        ; clk          ; clk         ; 1.000        ; 0.001      ; 1.299      ;
+; -0.266 ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]        ; clk          ; clk         ; 1.000        ; 0.001      ; 1.299      ;
+; -0.266 ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.001      ; 1.299      ;
+; -0.266 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.297      ;
+; -0.265 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.296      ;
+; -0.261 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.293      ;
+; -0.260 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.001      ; 1.293      ;
+; -0.257 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.288      ;
+; -0.254 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.286      ;
+; -0.253 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.286      ;
+; -0.247 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.279      ;
+; -0.244 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.275      ;
+; -0.237 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.268      ;
+; -0.229 ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.261      ;
+; -0.229 ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.261      ;
+; -0.223 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start ; clk          ; clk         ; 1.000        ; 0.000      ; 1.255      ;
+; -0.219 ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.251      ;
+; -0.219 ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad ; clk          ; clk         ; 1.000        ; 0.000      ; 1.251      ;
+; -0.215 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.247      ;
+; -0.215 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.247      ;
+; -0.215 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.247      ;
++--------+--------------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; ContadorM8:ContadorM8_i|contador[0]                          ; ContadorM8:ContadorM8_i|contador[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ContadorM8:ContadorM8_i|contador[1]                          ; ContadorM8:ContadorM8_i|contador[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ContadorM8:ContadorM8_i|contador[2]                          ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DetErrorParidad:DetErrorParidad_i|paridad                    ; DetErrorParidad:DetErrorParidad_i|paridad                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DetErrorParidad:DetErrorParidad_i|error                      ; DetErrorParidad:DetErrorParidad_i|error                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.240 ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.245 ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.334 ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.487      ;
+; 0.334 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.485      ;
+; 0.338 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.489      ;
+; 0.340 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ; DetErrorParidad:DetErrorParidad_i|error                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.491      ;
+; 0.356 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.361 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; DetectorFlanco:DetectorFlanco_i|estado_act.Esp1              ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.368 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; ContadorM8:ContadorM8_i|contador[1]                          ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.376 ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; ContadorM8:ContadorM8_i|contador[0]                          ; ContadorM8:ContadorM8_i|contador[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.380 ; DetErrorParidad:DetErrorParidad_i|error                      ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.381 ; DetErrorParidad:DetErrorParidad_i|error                      ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.383 ; ContadorM8:ContadorM8_i|contador[0]                          ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.535      ;
+; 0.424 ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.576      ;
+; 0.434 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; ContadorM8:ContadorM8_i|contador[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.586      ;
+; 0.437 ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.588      ;
+; 0.438 ; UnidadControl:UnidadControl_i|estado_actual.Registra         ; ContadorM8:ContadorM8_i|contador[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.590      ;
+; 0.494 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.646      ;
+; 0.499 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.652      ;
+; 0.508 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.660      ;
+; 0.511 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.519 ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.672      ;
+; 0.530 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.535 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.688      ;
+; 0.546 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.557 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.709      ;
+; 0.559 ; DetErrorParidad:DetErrorParidad_i|paridad                    ; DetErrorParidad:DetErrorParidad_i|error                      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.710      ;
+; 0.560 ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.711      ;
+; 0.564 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.716      ;
+; 0.571 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.723      ;
+; 0.577 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.729      ;
+; 0.578 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.730      ;
+; 0.579 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.730      ;
+; 0.580 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.731      ;
+; 0.580 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.731      ;
+; 0.585 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.737      ;
+; 0.592 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.744      ;
+; 0.594 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.603 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.604 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.756      ;
+; 0.604 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.755      ;
+; 0.606 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.758      ;
+; 0.606 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.758      ;
+; 0.606 ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.758      ;
+; 0.608 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.760      ;
+; 0.612 ; ContadorM8:ContadorM8_i|contador[2]                          ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ; clk          ; clk         ; 0.000        ; 0.000      ; 0.764      ;
+; 0.613 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.765      ;
+; 0.615 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.767      ;
+; 0.616 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.616 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.628 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ; clk          ; clk         ; 0.000        ; 0.001      ; 0.781      ;
+; 0.628 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ; clk          ; clk         ; 0.000        ; 0.001      ; 0.781      ;
+; 0.629 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ; clk          ; clk         ; 0.000        ; 0.001      ; 0.782      ;
+; 0.629 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.781      ;
+; 0.631 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; clk          ; clk         ; 0.000        ; 0.001      ; 0.784      ;
+; 0.632 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ; clk          ; clk         ; 0.000        ; 0.001      ; 0.785      ;
+; 0.634 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.786      ;
+; 0.636 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.787      ;
+; 0.637 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.637 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.638 ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.640 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.792      ;
+; 0.641 ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                         ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[0]                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[0]                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[1]                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[1]                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[2]                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ContadorM8:ContadorM8_i|contador[2]                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|error                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|error                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|paridad                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetErrorParidad:DetErrorParidad_i|paridad                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Esp1              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Esp1              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:DetectorFlanco_i|estado_act.Pulso             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[6]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesplIzq:RegDesplIzq_i|reg[7]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorMedioBit:TemporizadorMedioBit_i|contador[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; TemporizadorUnBit:TemporizadorUnBit_i|contador[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaParidad ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.CompruebaStop    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorParidad     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.ErrorTrama       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera0Start     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Espera1Bit       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaBitParidad ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.EsperaStop       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Registra         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Registra         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:UnidadControl_i|estado_actual.Reposo           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ContadorM8_i|contador[0]|clk                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; e_s       ; clk        ; 1.978 ; 1.978 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; e_s       ; clk        ; -1.537 ; -1.537 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; led_error_paridad ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+; led_error_trama   ; clk        ; 3.767 ; 3.767 ; Rise       ; clk             ;
+; s_p[*]            ; clk        ; 3.970 ; 3.970 ; Rise       ; clk             ;
+;  s_p[0]           ; clk        ; 3.970 ; 3.970 ; Rise       ; clk             ;
+;  s_p[1]           ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  s_p[2]           ; clk        ; 3.901 ; 3.901 ; Rise       ; clk             ;
+;  s_p[3]           ; clk        ; 3.899 ; 3.899 ; Rise       ; clk             ;
+;  s_p[4]           ; clk        ; 3.858 ; 3.858 ; Rise       ; clk             ;
+;  s_p[5]           ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+;  s_p[6]           ; clk        ; 3.779 ; 3.779 ; Rise       ; clk             ;
+;  s_p[7]           ; clk        ; 3.733 ; 3.733 ; Rise       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; led_error_paridad ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+; led_error_trama   ; clk        ; 3.767 ; 3.767 ; Rise       ; clk             ;
+; s_p[*]            ; clk        ; 3.733 ; 3.733 ; Rise       ; clk             ;
+;  s_p[0]           ; clk        ; 3.970 ; 3.970 ; Rise       ; clk             ;
+;  s_p[1]           ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  s_p[2]           ; clk        ; 3.901 ; 3.901 ; Rise       ; clk             ;
+;  s_p[3]           ; clk        ; 3.899 ; 3.899 ; Rise       ; clk             ;
+;  s_p[4]           ; clk        ; 3.858 ; 3.858 ; Rise       ; clk             ;
+;  s_p[5]           ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+;  s_p[6]           ; clk        ; 3.779 ; 3.779 ; Rise       ; clk             ;
+;  s_p[7]           ; clk        ; 3.733 ; 3.733 ; Rise       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.028  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -3.028  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -74.239 ; 0.0   ; 0.0      ; 0.0     ; -61.509             ;
+;  clk             ; -74.239 ; 0.000 ; N/A      ; N/A     ; -61.509             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; e_s       ; clk        ; 4.569 ; 4.569 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; e_s       ; clk        ; -1.537 ; -1.537 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; led_error_paridad ; clk        ; 6.874 ; 6.874 ; Rise       ; clk             ;
+; led_error_trama   ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+; s_p[*]            ; clk        ; 7.444 ; 7.444 ; Rise       ; clk             ;
+;  s_p[0]           ; clk        ; 7.444 ; 7.444 ; Rise       ; clk             ;
+;  s_p[1]           ; clk        ; 7.184 ; 7.184 ; Rise       ; clk             ;
+;  s_p[2]           ; clk        ; 7.209 ; 7.209 ; Rise       ; clk             ;
+;  s_p[3]           ; clk        ; 7.206 ; 7.206 ; Rise       ; clk             ;
+;  s_p[4]           ; clk        ; 7.151 ; 7.151 ; Rise       ; clk             ;
+;  s_p[5]           ; clk        ; 6.874 ; 6.874 ; Rise       ; clk             ;
+;  s_p[6]           ; clk        ; 6.896 ; 6.896 ; Rise       ; clk             ;
+;  s_p[7]           ; clk        ; 6.845 ; 6.845 ; Rise       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++-------------------+------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+------------+-------+-------+------------+-----------------+
+; led_error_paridad ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+; led_error_trama   ; clk        ; 3.767 ; 3.767 ; Rise       ; clk             ;
+; s_p[*]            ; clk        ; 3.733 ; 3.733 ; Rise       ; clk             ;
+;  s_p[0]           ; clk        ; 3.970 ; 3.970 ; Rise       ; clk             ;
+;  s_p[1]           ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  s_p[2]           ; clk        ; 3.901 ; 3.901 ; Rise       ; clk             ;
+;  s_p[3]           ; clk        ; 3.899 ; 3.899 ; Rise       ; clk             ;
+;  s_p[4]           ; clk        ; 3.858 ; 3.858 ; Rise       ; clk             ;
+;  s_p[5]           ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+;  s_p[6]           ; clk        ; 3.779 ; 3.779 ; Rise       ; clk             ;
+;  s_p[7]           ; clk        ; 3.733 ; 3.733 ; Rise       ; clk             ;
++-------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 555      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 555      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 57    ; 57   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Sun Jan 27 20:08:13 2019
+Info: Command: quartus_sta ReceptorSerie -c ReceptorSerie
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ReceptorSerie.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.028
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.028       -74.239 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -61.509 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.610
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.610        -6.029 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -50.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4562 megabytes
+    Info: Processing ended: Sun Jan 27 20:08:14 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,314 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Practica1\QUARTUS\simulation\modelsim
+Econtadorm8
+Z1 w1547979433
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Practica1\QUARTUS\simulation\modelsim
+Z6 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ContadorM8.vhd
+Z7 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ContadorM8.vhd
+l0
+L7
+VQ;1H9:SZo0gzI8ZcGh3;j2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1548016424.043000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ContadorM8.vhd|
+Z11 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ContadorM8.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 ?9S8e2`8h4VI4PLAkE;Y_2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 contadorm8 0 22 Q;1H9:SZo0gzI8ZcGh3;j2
+l18
+L14
+VRJ[hl8RUcF^^XmcMVLXBL3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 4cP@bTWA1m>U<8F33hBH:3
+!i10b 1
+Edetectorflanco
+Z14 w1547979477
+R3
+R4
+R5
+Z15 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetectorFlanco.vhd
+Z16 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetectorFlanco.vhd
+l0
+L6
+VRGV5fj]dc@HCC?MiQb6_R0
+R8
+31
+Z17 !s108 1548016424.157000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetectorFlanco.vhd|
+Z19 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetectorFlanco.vhd|
+R12
+R13
+!s100 OZhfOVeK^HE]zfLc<PGV@3
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 14 detectorflanco 0 22 RGV5fj]dc@HCC?MiQb6_R0
+l20
+L15
+VW>moIHgN=Ugc67m[iST>Y2
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 95WY;R^MXQhCIE_^HE>3R3
+!i10b 1
+Edeterrorparidad
+Z20 w1547978644
+R2
+R3
+R4
+R5
+Z21 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetErrorParidad.vhd
+Z22 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetErrorParidad.vhd
+l0
+L10
+Vc=RCiKF:UanYPfXHV4KJj0
+R8
+31
+Z23 !s108 1548016423.481000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetErrorParidad.vhd|
+Z25 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/DetErrorParidad.vhd|
+R12
+R13
+!s100 z5=mSMBhWLh?jgFSWgF@;2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 15 deterrorparidad 0 22 c=RCiKF:UanYPfXHV4KJj0
+l24
+L21
+Vz6<_>TciaBG2QQe>000DI1
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 PCbni<Ez>JP=7V`;W1K2`3
+!i10b 1
+Ereceptorserie
+Z26 w1547979895
+R3
+R4
+R5
+Z27 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ReceptorSerie.vhd
+Z28 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ReceptorSerie.vhd
+l0
+L9
+VEiX7YU;zhHUnoI2^iH14K3
+R8
+31
+Z29 !s108 1548016424.263000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ReceptorSerie.vhd|
+Z31 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/ReceptorSerie.vhd|
+R12
+R13
+!s100 IBY7hn1I>lIe3>GnE4:X43
+!i10b 1
+Astructural
+R3
+R4
+DEx4 work 13 receptorserie 0 22 EiX7YU;zhHUnoI2^iH14K3
+l100
+L18
+VMIglBoO2C=3LREQH0UL6Z1
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 H?]^`E@Cb_FoPP2?lY4T=0
+!i10b 1
+Ereceptorserie_vhd_tst
+w1548016359
+R3
+R4
+R5
+8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/simulation/modelsim/ReceptorSerie.vht
+FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/simulation/modelsim/ReceptorSerie.vht
+l0
+L6
+VP7]N1<k3M039`l0mmP6aZ1
+!s100 RXD:4OADejK2A3[?hEea]3
+R8
+31
+!i10b 1
+!s108 1548016424.374000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/simulation/modelsim/ReceptorSerie.vht|
+!s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/simulation/modelsim/ReceptorSerie.vht|
+R12
+R13
+Eregdesplizq
+Z32 w1547978708
+R3
+R4
+R5
+Z33 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/RegDesplIzq.vhd
+Z34 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/RegDesplIzq.vhd
+l0
+L7
+V_VZdgJNS@>TEhVOHk6<>J0
+R8
+31
+Z35 !s108 1548016423.608000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/RegDesplIzq.vhd|
+Z37 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/RegDesplIzq.vhd|
+R12
+R13
+!s100 ;lh5FUD;m?]f<QAIbm`2<0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 regdesplizq 0 22 _VZdgJNS@>TEhVOHk6<>J0
+l24
+L22
+VZ[dVa2=EOig9=mlh^`>^53
+R8
+31
+R35
+R36
+R37
+R12
+R13
+!s100 aTA^M9o[M;0FNI5KSDYIH2
+!i10b 1
+Etemporizadormediobit
+Z38 w1547979359
+R2
+R3
+R4
+R5
+Z39 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorMedioBit.vhd
+Z40 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorMedioBit.vhd
+l0
+L9
+VA>JmnDFh_VT1aTK@DN80L3
+R8
+31
+Z41 !s108 1548016423.931000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorMedioBit.vhd|
+Z43 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorMedioBit.vhd|
+R12
+R13
+!s100 bLH>HCH8A=Go`VGm:DEDG1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 20 temporizadormediobit 0 22 A>JmnDFh_VT1aTK@DN80L3
+l20
+L16
+V>5cno3n<V3>j[`VT^1n`W3
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 7gRQe3LGfRJ5<=6bF=5WX1
+!i10b 1
+Etemporizadorunbit
+Z44 w1547979320
+R2
+R3
+R4
+R5
+Z45 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorUnBit.vhd
+Z46 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorUnBit.vhd
+l0
+L9
+Vo5_I?JcN`2VE:G6SC=d573
+R8
+31
+Z47 !s108 1548016423.823000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorUnBit.vhd|
+Z49 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/TemporizadorUnBit.vhd|
+R12
+R13
+!s100 QOk_jACKLYbjjNP^ojd=D3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 17 temporizadorunbit 0 22 o5_I?JcN`2VE:G6SC=d573
+l19
+L15
+V@>ZQMG969lGB?7Y9=IRk71
+R8
+31
+R47
+R48
+R49
+R12
+R13
+!s100 lSF[z^H_me@MiYfS2R7Tj2
+!i10b 1
+Eunidadcontrol
+Z50 w1548005719
+R2
+R3
+R4
+R5
+Z51 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/UnidadControl.vhd
+Z52 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/UnidadControl.vhd
+l0
+L8
+VG;LOhDgzbA;]ncYI`Hk_W1
+R8
+31
+Z53 !s108 1548016423.714000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/UnidadControl.vhd|
+Z55 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/QUARTUS/UnidadControl.vhd|
+R12
+R13
+!s100 U=oD0UF?^X^OiP3d[ZfhA1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 13 unidadcontrol 0 22 G;LOhDgzbA;]ncYI`Hk_W1
+l45
+L28
+VjD_XoDNZhJ<8IakTWndej1
+R8
+31
+R53
+R54
+R55
+R12
+R13
+!s100 ^NXSEi[@NbkdjeCb_nT[_2
+!i10b 1

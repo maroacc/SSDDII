@@ -1,0 +1,332 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\AlfonsoMariajoDig\Practica1\simulation\modelsim
+Econtadorm8
+Z1 w1548848188
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\AlfonsoMariajoDig\Practica1\simulation\modelsim
+Z6 8D:/AlfonsoMariajoDig/Practica1/ContadorM8.vhd
+Z7 FD:/AlfonsoMariajoDig/Practica1/ContadorM8.vhd
+l0
+L8
+VQ;1H9:SZo0gzI8ZcGh3;j2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1548851946.485000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/ContadorM8.vhd|
+Z11 !s107 D:/AlfonsoMariajoDig/Practica1/ContadorM8.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 nYBbl=Y:3NX_RD5o7VJ@01
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 contadorm8 0 22 Q;1H9:SZo0gzI8ZcGh3;j2
+l19
+L15
+V`B9NHBJeGoLEln?4Lc7X@2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 YcK4U6nm6CUiOjh>1^Hm11
+!i10b 1
+Edetectorflanco
+Z14 w1548848969
+R3
+R4
+R5
+Z15 8D:/AlfonsoMariajoDig/Practica1/DetectorFlanco.vhd
+Z16 FD:/AlfonsoMariajoDig/Practica1/DetectorFlanco.vhd
+l0
+L7
+VRGV5fj]dc@HCC?MiQb6_R0
+R8
+31
+Z17 !s108 1548851946.672000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/DetectorFlanco.vhd|
+Z19 !s107 D:/AlfonsoMariajoDig/Practica1/DetectorFlanco.vhd|
+R12
+R13
+!s100 A3RP52E1UP]L@UHVnY1hY3
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 14 detectorflanco 0 22 RGV5fj]dc@HCC?MiQb6_R0
+l21
+L16
+VgKbf2KkgTba>9MT_FUoNe2
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 <z]nY39JKWWbYIHfQZ8?03
+!i10b 1
+Edeterrorparidad
+Z20 w1548851089
+R2
+R3
+R4
+R5
+Z21 8D:/AlfonsoMariajoDig/Practica1/DetErrorParidad.vhd
+Z22 FD:/AlfonsoMariajoDig/Practica1/DetErrorParidad.vhd
+l0
+L11
+VFe7W`]aWXN:LlDS`9Ek3G1
+R8
+31
+Z23 !s108 1548851946.860000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/DetErrorParidad.vhd|
+Z25 !s107 D:/AlfonsoMariajoDig/Practica1/DetErrorParidad.vhd|
+R12
+R13
+!s100 10iN0mEkUOIIa0?fEnOfo2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 15 deterrorparidad 0 22 Fe7W`]aWXN:LlDS`9Ek3G1
+l26
+L23
+Vf]KEnTd0=j6jTB[08YedK2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 >QkHnz]@Wh`mHmHHD2ooj1
+!i10b 1
+Ereceptorserie
+Z26 w1548851138
+R3
+R4
+R5
+Z27 8D:/AlfonsoMariajoDig/Practica1/ReceptorSerie.vhd
+Z28 FD:/AlfonsoMariajoDig/Practica1/ReceptorSerie.vhd
+l0
+L10
+VEiX7YU;zhHUnoI2^iH14K3
+R8
+31
+Z29 !s108 1548851947.032000
+Z30 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/ReceptorSerie.vhd|
+Z31 !s107 D:/AlfonsoMariajoDig/Practica1/ReceptorSerie.vhd|
+R12
+R13
+!s100 E@P`e9zk96@?h1SLTb08A1
+!i10b 1
+Astructural
+R3
+R4
+DEx4 work 13 receptorserie 0 22 EiX7YU;zhHUnoI2^iH14K3
+l102
+L19
+VFl62HnDGDLO53POGLLB`h0
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 =Fd;^K66Yb5H>zWI>bCd?1
+!i10b 1
+Ereceptorserie_vhd_tst
+Z32 w1548851377
+R2
+R3
+R4
+R5
+Z33 8D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht
+Z34 FD:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht
+l0
+L8
+Vn3PezHCP=cZA=m`ePZ0l01
+!s100 ]:0oUXcoHWW[VICRQ>R0W0
+R8
+31
+!i10b 1
+Z35 !s108 1548851948.001000
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht|
+Z37 !s107 D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht|
+R12
+R13
+Areceptorserie_arch
+R2
+R3
+R4
+DEx4 work 21 receptorserie_vhd_tst 0 22 n3PezHCP=cZA=m`ePZ0l01
+l36
+L11
+VeND]H28h:PdU0HNLi_1b81
+!s100 E>1PZTA^oaM`0JbE^hG4o1
+R8
+31
+!i10b 1
+R35
+R36
+R37
+R12
+R13
+Eregdespldcha
+Z38 w1548054933
+R3
+R4
+R5
+Z39 8D:/AlfonsoMariajoDig/Practica1/RegDesplDcha.vhd
+Z40 FD:/AlfonsoMariajoDig/Practica1/RegDesplDcha.vhd
+l0
+L8
+V_4bcLKe_MgL6@?RE2<^Cb0
+R8
+31
+Z41 !s108 1548851947.235000
+Z42 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/RegDesplDcha.vhd|
+Z43 !s107 D:/AlfonsoMariajoDig/Practica1/RegDesplDcha.vhd|
+R12
+R13
+!s100 TA[;z?5:LENbESE>f63?R1
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 12 regdespldcha 0 22 _4bcLKe_MgL6@?RE2<^Cb0
+l25
+L23
+Vh[dhgZ8g14>[5k_4?bU=i3
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 XGA4kH:TAPCd?GHn=NR0S1
+!i10b 1
+Etemporizadormediobit
+Z44 w1548055011
+R2
+R3
+R4
+R5
+Z45 8D:/AlfonsoMariajoDig/Practica1/TemporizadorMedioBit.vhd
+Z46 FD:/AlfonsoMariajoDig/Practica1/TemporizadorMedioBit.vhd
+l0
+L10
+VA>JmnDFh_VT1aTK@DN80L3
+R8
+31
+Z47 !s108 1548851947.422000
+Z48 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/TemporizadorMedioBit.vhd|
+Z49 !s107 D:/AlfonsoMariajoDig/Practica1/TemporizadorMedioBit.vhd|
+R12
+R13
+!s100 1K7KP=JEQO40G0aZRe:Aj0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 20 temporizadormediobit 0 22 A>JmnDFh_VT1aTK@DN80L3
+l21
+L17
+V>5cno3n<V3>j[`VT^1n`W3
+R8
+31
+R47
+R48
+R49
+R12
+R13
+!s100 :mdGUC^nin5Yd1n@c@a@S0
+!i10b 1
+Etemporizadorunbit
+Z50 w1548055057
+R2
+R3
+R4
+R5
+Z51 8D:/AlfonsoMariajoDig/Practica1/TemporizadorUnBit.vhd
+Z52 FD:/AlfonsoMariajoDig/Practica1/TemporizadorUnBit.vhd
+l0
+L10
+Vo5_I?JcN`2VE:G6SC=d573
+R8
+31
+Z53 !s108 1548851947.610000
+Z54 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/TemporizadorUnBit.vhd|
+Z55 !s107 D:/AlfonsoMariajoDig/Practica1/TemporizadorUnBit.vhd|
+R12
+R13
+!s100 QdabbiQ]HNj@nfnZgeZ1_2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 17 temporizadorunbit 0 22 o5_I?JcN`2VE:G6SC=d573
+l20
+L16
+V@>ZQMG969lGB?7Y9=IRk71
+R8
+31
+R53
+R54
+R55
+R12
+R13
+!s100 WRAFfY5UIPLa6CWGzTlhl1
+!i10b 1
+Eunidadcontrol
+Z56 w1548850653
+R2
+R3
+R4
+R5
+Z57 8D:/AlfonsoMariajoDig/Practica1/UnidadControl.vhd
+Z58 FD:/AlfonsoMariajoDig/Practica1/UnidadControl.vhd
+l0
+L9
+VZ9Ga@im3iN@<WP1jgReWJ0
+R8
+31
+Z59 !s108 1548851947.813000
+Z60 !s90 -reportprogress|300|-93|-work|work|D:/AlfonsoMariajoDig/Practica1/UnidadControl.vhd|
+Z61 !s107 D:/AlfonsoMariajoDig/Practica1/UnidadControl.vhd|
+R12
+R13
+!s100 ffoA2eY10?P3fk<Ff3Dmk0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 13 unidadcontrol 0 22 Z9Ga@im3iN@<WP1jgReWJ0
+l46
+L29
+V;6BTKPiBFHTn8mgT7YSUc1
+R8
+31
+R59
+R60
+R61
+R12
+R13
+!s100 ]EdXDIJT7=57:5l6B7eH?0
+!i10b 1

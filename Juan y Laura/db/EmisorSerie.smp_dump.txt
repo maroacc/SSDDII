@@ -1,0 +1,15 @@
+
+State Machine - |EmisorSerie|Control:i_4|estado_act
+Name estado_act.BitStop estado_act.Paridad estado_act.ActivaReg estado_act.EsperaBit estado_act.BitStart estado_act.Rep 
+estado_act.Rep 0 0 0 0 0 0 
+estado_act.BitStart 0 0 0 0 1 1 
+estado_act.EsperaBit 0 0 0 1 0 1 
+estado_act.ActivaReg 0 0 1 0 0 1 
+estado_act.Paridad 0 1 0 0 0 1 
+estado_act.BitStop 1 0 0 0 0 1 
+
+State Machine - |EmisorSerie|DetectorFlanco:i_1|estado_act
+Name estado_act.Esp0 estado_act.Pulso estado_act.Esp1 
+estado_act.Esp1 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp0 1 0 1 

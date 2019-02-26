@@ -1,0 +1,92 @@
+-- entity SumadorNBits is
+-- generic (g_data_w : integer := 32); -- No bits de los datos
+-- port (
+--         a, b : in std_logic_vector (g_data_w -1 downto 0);
+--         s : out std_logic_vector (g_data_w -1 downto 0);
+--         c_out : out std_logic ); -- Acarreo de salida
+-- end SumadorNBits ;
+
+--TestBench para el Sumador de N Bits descrito arriba
+
+entity SumadorNBits_vhd_tst is
+end SumadorNBits_vhd_tst;
+
+architecture SumadorNBits_arch of SumadorNBits is
+
+  signal a, b  : std_logic_vector (g_data_w -1 downto 0);
+  signal s     : std_logic_vector (g_data_w -1 downto 0);
+  signal c_out : std_logic;
+
+
+  component SumadorNBits
+  generic (
+    g_data_w : integer := 32
+  );
+  port (
+    a, b  : in  std_logic_vector (g_data_w -1 downto 0);
+    s     : out std_logic_vector (g_data_w -1 downto 0);
+    c_out : out std_logic
+  );
+  end component SumadorNBits;
+
+begin --architecture
+
+  SumadorNBits_i : SumadorNBits
+  generic map (g_data_w => 4)
+
+  port map (
+    a     => a,
+    b     => b,
+    s     => s,
+    c_out => c_out
+  );
+
+
+  always : process
+
+  -- a + b en g_data_w + 1 bits
+  signal a_mas_b, a_ext, b_ext : unsigned (4 downto 0);
+
+  begin --process always
+
+  --Inicialización de las variables
+  a <= (others => '0');
+  b <= (others => '0');
+  a_aux <= (others => '0');
+  b_aux <= (others => '0');
+
+  wait for 10 ns;
+
+    for i in 0 to 15 loop
+      --Usa g_data_w + 1 bits para tener en cuenta el acarreo
+      a <= std_logic_vector(to_unsigned(i, 4));
+      wait for 1 ps;
+      a_ext <= unsigned('0' & a);
+      wait for 20 ns;
+
+        for j in 0 to 15 loop
+          b <= std_logic_vector(to_unsigned(j, 4));
+          wait for 1 ps;
+          
+          b_ext <= unsigned('0' & b);
+          wait for 20 ns;
+          a_mas_b <= a_ext + b_ext;
+
+          assert s = a_mas_b(3 downto 0)
+          report "Error en la suma"
+          severity failure;
+
+          assert c_out = a_mas_b(4)
+          report "Error de acarreo de salida"
+          severity failure;
+
+        end loop;
+   end loop;
+
+   assert false
+   report "fin de la simulacion"
+   severity failure;
+
+ end process; --always
+
+end SumadorNBits_arch;

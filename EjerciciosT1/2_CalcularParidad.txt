@@ -1,0 +1,25 @@
+--Funcion calcular paridad
+--Ajustable a paridad par o impar
+--Devuelve un 1 si la paridad es correcta o un 0 si no lo else
+
+function CalcularParidad (
+                            dato : in std_logic_vector;
+                            par  : in boolean)
+return std_logic is
+--signals
+signal resultado : std_logic;
+
+begin --function
+  resultado <= '0';
+  for i in 0 to dato'length loop
+    resultado <= dato(i) xor resultado;
+    wait for 5 ns;
+  end loop;
+
+  if par = true then
+    resultado <= not(resultado);
+  end if;
+
+return resultado;
+
+end function;

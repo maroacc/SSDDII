@@ -1,0 +1,94 @@
+--Testbench para RegDespl a Izquierda con enable
+library ieee;
+  use ieee.std_logic_1164.all;
+  use ieee.numeric_std.all;
+
+entity RegDespl_vhd_tst is
+end RegDespl_vhd_tst;
+
+architecture Testbench of RegDespl_vhd_tst is
+ --constants
+ constant c_clk_semiperiod : time := 10 ns;  --CLK a 50MHz
+ --signals
+
+  signal clk     : std_logic:= '0';
+  signal reset_n : std_logic;
+  signal e_s     : std_logic;
+  signal enable  : std_logic;
+  signal s_p     : std_logic_vector (7 downto 0);
+
+  component RegDespl is
+  port ( clk     : in std_logic;
+         reset_n : in std_logic;
+         e_s     : in std_logic;
+         enable  : in std_logic;
+         s_p     : out std_logic_vector (7 downto 0));
+  end component;
+
+  --Dato enviado por el TestBench
+  signal dato : std_logic_vector (7 downto 0);
+
+begin --architecture
+
+  RegDespl_i : RegDespl
+  port map ( clk     => clk,
+             reset_n => reset_n,
+             e_s     => e_s,
+             enable  => enable,
+             s_p     => s_p);
+
+  clk <= not(clk) after c_clk_semiperiod;
+
+  always : process
+
+    procedure : SendSerial(
+                      signal dato_in  : in std_logic_vector(7 downto 0);
+                      signal enable   : out std_logic;
+                      signal dato_out : out std_logic) is
+    begin --procedure
+
+      for i in 7 downto 0 loop  --Desplaza a la Izquierda
+        --Enviamos el bit correspondiente a la salida
+        dato_out <= dato_in(i);
+        --Damos un pulso al enable
+        enable   <= '1';
+        wait for 20 ns;
+        enable   <= '0';
+        --Esperamos antes de enviar el siguiente bit
+        wait for 100 ns;
+      end loop;
+
+   end SendSerial;
+
+  begin --process always
+
+    --Inicialización de las variables
+    enable <= '0';
+    e_s    <= '0';
+    dato   <= (others => '0');
+    --Se activa el reset durante 100 ns
+    reset_n <= '0';
+    wait for 100 ns;
+    reset_n <= '1';
+    --Se esperan 5 ns para no violar tiempos de hold y set up
+    wait for 5 ns;
+
+    for i = 0 to 255 loop
+      dato <= std_logic_vector(to_unsigned(i, 8));
+      wait for 20 ns;
+      SendSerial(dato, enable, e_s);
+      wait for 20 ns;
+
+      assert s_p = std_logic_vector(to_unsigned(i, 8))
+      report "Error en el registro de desplazamiento"
+      severity failure;
+
+    end loop;
+
+    assert false
+    report "Fin de la simulación"
+    severity failure;
+
+  end process;
+
+end Testbench;

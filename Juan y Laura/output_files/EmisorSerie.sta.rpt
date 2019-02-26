@@ -1,0 +1,1125 @@
+TimeQuest Timing Analyzer report for EmisorSerie
+Sat Feb 09 11:46:12 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; EmisorSerie                                        ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 152.25 MHz ; 152.25 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.784 ; -62.630       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -40.735               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                            ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.784 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 3.321      ;
+; -2.741 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 3.278      ;
+; -2.660 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 3.197      ;
+; -2.650 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 3.187      ;
+; -2.648 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 3.185      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.638 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.676      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.603 ; Contador1Bit:i_3|cuenta[2]       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.641      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.568 ; Contador1Bit:i_3|cuenta[0]       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.606      ;
+; -2.563 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 3.100      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.524 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 0.500        ; 0.001      ; 3.063      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.477 ; Contador1Bit:i_3|cuenta[1]       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.515      ;
+; -2.446 ; Control:i_4|estado_act.Rep       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.484      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.430 ; Contador1Bit:i_3|cuenta[4]       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.468      ;
+; -2.383 ; Contador1Bit:i_3|cuenta[10]      ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 2.920      ;
+; -2.359 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 2.896      ;
+; -2.318 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; -0.001     ; 2.855      ;
+; -2.317 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; -0.001     ; 2.854      ;
+; -2.316 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; -0.001     ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 0.500        ; 0.001      ; 2.853      ;
+; -2.314 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; -0.001     ; 2.851      ;
+; -2.312 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; -0.001     ; 2.849      ;
+; -2.310 ; Contador1Bit:i_3|cuenta[4]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 2.847      ;
+; -2.275 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; -0.001     ; 2.812      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                  ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; ContadorRegistro:i_2|cuenta[2]      ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; ContadorRegistro:i_2|cuenta[1]      ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; ContadorRegistro:i_2|cuenta[0]      ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; RegDesp:i_5|desp_int[7]             ; RegDesp:i_5|desp_int[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Control:i_4|estado_act.BitStart     ; Control:i_4|estado_act.BitStart     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Control:i_4|estado_act.EsperaBit    ; Control:i_4|estado_act.EsperaBit    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Control:i_4|estado_act.Paridad      ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Control:i_4|estado_act.BitStop      ; Control:i_4|estado_act.BitStop      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Control:i_4|estado_act.Rep          ; Control:i_4|estado_act.Rep          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.615 ; RegDesp:i_5|desp_int[3]             ; RegDesp:i_5|desp_int[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.901      ;
+; 0.617 ; RegDesp:i_5|desp_int[2]             ; RegDesp:i_5|desp_int[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.903      ;
+; 0.617 ; RegDesp:i_5|desp_int[1]             ; RegDesp:i_5|desp_int[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.903      ;
+; 0.630 ; ContadorRegistro:i_2|cuenta[0]      ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.916      ;
+; 0.636 ; Contador1Bit:i_3|cuenta[11]         ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.765 ; RegDesp:i_5|desp_int[5]             ; RegDesp:i_5|desp_int[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.051      ;
+; 0.971 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.257      ;
+; 0.975 ; ContadorRegistro:i_2|cuenta[0]      ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.261      ;
+; 0.975 ; ContadorRegistro:i_2|cuenta[1]      ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.261      ;
+; 0.977 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; DetectorFlanco:i_1|estado_act.Pulso ; Control:i_4|estado_act.Rep          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.263      ;
+; 0.978 ; ContadorRegistro:i_2|cuenta[1]      ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.264      ;
+; 0.979 ; DetectorFlanco:i_1|estado_act.Pulso ; Control:i_4|estado_act.BitStart     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.265      ;
+; 0.990 ; Control:i_4|estado_act.EsperaBit    ; Control:i_4|estado_act.ActivaReg    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.276      ;
+; 1.006 ; RegDesp:i_5|desp_int[6]             ; RegDesp:i_5|desp_int[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.292      ;
+; 1.011 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.011 ; RegDesp:i_5|desp_int[4]             ; RegDesp:i_5|desp_int[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.015 ; RegDesp:i_5|desp_int[7]             ; RegDesp:i_5|desp_int[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.020 ; ContadorRegistro:i_2|cuenta[2]      ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.306      ;
+; 1.020 ; ContadorRegistro:i_2|cuenta[2]      ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.306      ;
+; 1.026 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.026 ; Control:i_4|estado_act.EsperaBit    ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.030 ; Control:i_4|estado_act.Paridad      ; Control:i_4|estado_act.BitStop      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.316      ;
+; 1.199 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.485      ;
+; 1.204 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; Control:i_4|estado_act.Rep          ; Control:i_4|estado_act.BitStart     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.235 ; Control:i_4|estado_act.ActivaReg    ; Control:i_4|estado_act.EsperaBit    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.521      ;
+; 1.236 ; Control:i_4|estado_act.BitStop      ; Control:i_4|estado_act.Rep          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.522      ;
+; 1.252 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.538      ;
+; 1.403 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.689      ;
+; 1.409 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.695      ;
+; 1.423 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[6]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.209      ;
+; 1.423 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[4]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.209      ;
+; 1.444 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.730      ;
+; 1.456 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.742      ;
+; 1.468 ; Control:i_4|estado_act.BitStart     ; Control:i_4|estado_act.EsperaBit    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.754      ;
+; 1.475 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.761      ;
+; 1.483 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.769      ;
+; 1.489 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.775      ;
+; 1.503 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.789      ;
+; 1.515 ; Contador1Bit:i_3|cuenta[9]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.801      ;
+; 1.524 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.810      ;
+; 1.527 ; Contador1Bit:i_3|cuenta[10]         ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.813      ;
+; 1.530 ; DetectorFlanco:i_1|estado_act.Esp0  ; DetectorFlanco:i_1|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 1.816      ;
+; 1.536 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.822      ;
+; 1.563 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.849      ;
+; 1.569 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.855      ;
+; 1.604 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.890      ;
+; 1.616 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.902      ;
+; 1.631 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.917      ;
+; 1.636 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.922      ;
+; 1.636 ; Control:i_4|estado_act.BitStart     ; RegDesp:i_5|desp_int[7]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.422      ;
+; 1.643 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.929      ;
+; 1.659 ; Control:i_4|estado_act.Rep          ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.945      ;
+; 1.682 ; Control:i_4|estado_act.ActivaReg    ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; -0.500       ; 0.001      ; 1.469      ;
+; 1.683 ; Control:i_4|estado_act.ActivaReg    ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; -0.500       ; 0.001      ; 1.470      ;
+; 1.684 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.970      ;
+; 1.685 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.971      ;
+; 1.696 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.982      ;
+; 1.697 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[7]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.483      ;
+; 1.711 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.997      ;
+; 1.723 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.009      ;
+; 1.739 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[2]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.525      ;
+; 1.739 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[0]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.525      ;
+; 1.740 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[1]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.526      ;
+; 1.765 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.051      ;
+; 1.772 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[5]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.558      ;
+; 1.773 ; Control:i_4|estado_act.ActivaReg    ; RegDesp:i_5|desp_int[3]             ; clk          ; clk         ; -0.500       ; 0.000      ; 1.559      ;
+; 1.810 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.096      ;
+; 1.845 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.131      ;
+; 1.870 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.156      ;
+; 1.885 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.171      ;
+; 1.890 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.176      ;
+; 1.907 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.193      ;
+; 1.948 ; Contador1Bit:i_3|cuenta[9]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.234      ;
+; 1.950 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.236      ;
+; 1.960 ; Contador1Bit:i_3|cuenta[10]         ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.246      ;
+; 1.965 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.251      ;
+; 1.970 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.256      ;
+; 1.987 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.273      ;
+; 2.019 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.305      ;
+; 2.028 ; Contador1Bit:i_3|cuenta[9]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.314      ;
+; 2.030 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.316      ;
+; 2.036 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.322      ;
+; 2.045 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.331      ;
+; 2.050 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.336      ;
+; 2.067 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.353      ;
+; 2.070 ; Control:i_4|estado_act.ActivaReg    ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; -0.500       ; 0.001      ; 1.857      ;
+; 2.099 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.385      ;
+; 2.110 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.396      ;
+; 2.116 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.402      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; CalcParidad:i_6|parid_impar         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; CalcParidad:i_6|parid_impar         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[0]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[0]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[10]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[10]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[11]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[11]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[1]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[1]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[2]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[2]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[3]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[3]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[4]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[4]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[5]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[5]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[6]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[6]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[7]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[7]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[8]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[8]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[9]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[9]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.ActivaReg    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.ActivaReg    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.BitStart     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.BitStart     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.BitStop      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.BitStop      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.EsperaBit    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.EsperaBit    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.Paridad      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.Paridad      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.Rep          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.Rep          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Esp0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Esp0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[0]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[0]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[1]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[1]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[2]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[2]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[3]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[3]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[4]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[4]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[5]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[5]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[6]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[6]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[7]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[7]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_1|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_1|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_2|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_2|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_2|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_2|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_2|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_2|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[10]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[10]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[11]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[11]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[4]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[4]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[5]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[5]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[6]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[6]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[7]|clk                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; entrada[*]  ; clk        ; 4.769 ; 4.769 ; Rise       ; clk             ;
+;  entrada[0] ; clk        ; 4.084 ; 4.084 ; Rise       ; clk             ;
+;  entrada[1] ; clk        ; 4.315 ; 4.315 ; Rise       ; clk             ;
+;  entrada[2] ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  entrada[3] ; clk        ; 3.922 ; 3.922 ; Rise       ; clk             ;
+;  entrada[4] ; clk        ; 4.492 ; 4.492 ; Rise       ; clk             ;
+;  entrada[5] ; clk        ; 4.162 ; 4.162 ; Rise       ; clk             ;
+;  entrada[6] ; clk        ; 4.490 ; 4.490 ; Rise       ; clk             ;
+;  entrada[7] ; clk        ; 4.769 ; 4.769 ; Rise       ; clk             ;
+; boton       ; clk        ; 3.465 ; 3.465 ; Fall       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; entrada[*]  ; clk        ; -3.207 ; -3.207 ; Rise       ; clk             ;
+;  entrada[0] ; clk        ; -3.362 ; -3.362 ; Rise       ; clk             ;
+;  entrada[1] ; clk        ; -3.396 ; -3.396 ; Rise       ; clk             ;
+;  entrada[2] ; clk        ; -3.389 ; -3.389 ; Rise       ; clk             ;
+;  entrada[3] ; clk        ; -3.207 ; -3.207 ; Rise       ; clk             ;
+;  entrada[4] ; clk        ; -3.616 ; -3.616 ; Rise       ; clk             ;
+;  entrada[5] ; clk        ; -3.293 ; -3.293 ; Rise       ; clk             ;
+;  entrada[6] ; clk        ; -3.617 ; -3.617 ; Rise       ; clk             ;
+;  entrada[7] ; clk        ; -3.898 ; -3.898 ; Rise       ; clk             ;
+; boton       ; clk        ; -3.216 ; -3.216 ; Fall       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; salida    ; clk        ; 8.193 ; 8.193 ; Rise       ; clk             ;
+; salida    ; clk        ; 9.115 ; 9.115 ; Fall       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; salida    ; clk        ; 7.379 ; 7.379 ; Rise       ; clk             ;
+; salida    ; clk        ; 7.802 ; 7.802 ; Fall       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.738 ; -15.799       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -33.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                            ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.738 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.270      ;
+; -0.726 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.258      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.712 ; Control:i_4|estado_act.Rep       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.244      ;
+; -0.709 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.241      ;
+; -0.698 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.230      ;
+; -0.684 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.216      ;
+; -0.672 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.204      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.628 ; Control:i_4|estado_act.ActivaReg ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.160      ;
+; -0.594 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.126      ;
+; -0.588 ; Contador1Bit:i_3|cuenta[10]      ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.120      ;
+; -0.582 ; Contador1Bit:i_3|cuenta[4]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.114      ;
+; -0.576 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 1.108      ;
+; -0.575 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 1.107      ;
+; -0.573 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 1.105      ;
+; -0.572 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.104      ;
+; -0.570 ; Contador1Bit:i_3|cuenta[3]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.102      ;
+; -0.564 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 1.096      ;
+; -0.563 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 1.095      ;
+; -0.561 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 1.093      ;
+; -0.560 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.092      ;
+; -0.558 ; Contador1Bit:i_3|cuenta[11]      ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.090      ;
+; -0.547 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 1.079      ;
+; -0.546 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 1.078      ;
+; -0.544 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 1.076      ;
+; -0.543 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.075      ;
+; -0.542 ; Contador1Bit:i_3|cuenta[7]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.074      ;
+; -0.541 ; Contador1Bit:i_3|cuenta[6]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.073      ;
+; -0.539 ; Contador1Bit:i_3|cuenta[1]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.071      ;
+; -0.536 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 1.068      ;
+; -0.535 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 1.067      ;
+; -0.533 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 1.065      ;
+; -0.532 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.064      ;
+; -0.530 ; Contador1Bit:i_3|cuenta[8]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.062      ;
+; -0.522 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 1.054      ;
+; -0.521 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 1.053      ;
+; -0.519 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 1.051      ;
+; -0.518 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.050      ;
+; -0.516 ; Contador1Bit:i_3|cuenta[5]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.048      ;
+; -0.510 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 1.042      ;
+; -0.509 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 1.041      ;
+; -0.507 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 1.039      ;
+; -0.506 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 1.038      ;
+; -0.504 ; Contador1Bit:i_3|cuenta[9]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 1.036      ;
+; -0.480 ; ContadorRegistro:i_2|cuenta[2]   ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 1.011      ;
+; -0.467 ; Contador1Bit:i_3|cuenta[0]       ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; 0.000      ; 0.999      ;
+; -0.466 ; ContadorRegistro:i_2|cuenta[1]   ; Control:i_4|estado_act.Paridad   ; clk          ; clk         ; 0.500        ; -0.001     ; 0.997      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[6]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[5]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[4]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[3]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[2]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[1]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.448 ; Control:i_4|estado_act.BitStart  ; RegDesp:i_5|desp_int[0]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.979      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[6]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[5]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[4]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[3]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[2]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[1]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.435 ; Control:i_4|estado_act.ActivaReg ; RegDesp:i_5|desp_int[0]          ; clk          ; clk         ; 0.500        ; -0.001     ; 0.966      ;
+; -0.432 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 0.964      ;
+; -0.431 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.BitStart  ; clk          ; clk         ; 0.500        ; 0.000      ; 0.963      ;
+; -0.429 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.ActivaReg ; clk          ; clk         ; 0.500        ; 0.000      ; 0.961      ;
+; -0.428 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.Rep       ; clk          ; clk         ; 0.500        ; 0.000      ; 0.960      ;
+; -0.426 ; Contador1Bit:i_3|cuenta[2]       ; Control:i_4|estado_act.BitStop   ; clk          ; clk         ; 0.500        ; 0.000      ; 0.958      ;
+; -0.426 ; Contador1Bit:i_3|cuenta[10]      ; Control:i_4|estado_act.EsperaBit ; clk          ; clk         ; 0.500        ; 0.000      ; 0.958      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[8]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[9]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[10]      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[11]      ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
+; -0.425 ; Contador1Bit:i_3|cuenta[8]       ; Contador1Bit:i_3|cuenta[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.457      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                  ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; ContadorRegistro:i_2|cuenta[2]      ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ContadorRegistro:i_2|cuenta[1]      ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ContadorRegistro:i_2|cuenta[0]      ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; RegDesp:i_5|desp_int[7]             ; RegDesp:i_5|desp_int[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Control:i_4|estado_act.BitStart     ; Control:i_4|estado_act.BitStart     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Control:i_4|estado_act.EsperaBit    ; Control:i_4|estado_act.EsperaBit    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Control:i_4|estado_act.Paridad      ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Control:i_4|estado_act.BitStop      ; Control:i_4|estado_act.BitStop      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Control:i_4|estado_act.Rep          ; Control:i_4|estado_act.Rep          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; RegDesp:i_5|desp_int[3]             ; RegDesp:i_5|desp_int[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; RegDesp:i_5|desp_int[2]             ; RegDesp:i_5|desp_int[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; RegDesp:i_5|desp_int[1]             ; RegDesp:i_5|desp_int[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.247 ; Contador1Bit:i_3|cuenta[11]         ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.247 ; ContadorRegistro:i_2|cuenta[0]      ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.291 ; RegDesp:i_5|desp_int[5]             ; RegDesp:i_5|desp_int[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.443      ;
+; 0.360 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; ContadorRegistro:i_2|cuenta[0]      ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; ContadorRegistro:i_2|cuenta[1]      ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.364 ; ContadorRegistro:i_2|cuenta[1]      ; ContadorRegistro:i_2|cuenta[2]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; DetectorFlanco:i_1|estado_act.Pulso ; Control:i_4|estado_act.Rep          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.367 ; RegDesp:i_5|desp_int[6]             ; RegDesp:i_5|desp_int[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.372 ; DetectorFlanco:i_1|estado_act.Pulso ; Control:i_4|estado_act.BitStart     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.375 ; ContadorRegistro:i_2|cuenta[2]      ; ContadorRegistro:i_2|cuenta[1]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; ContadorRegistro:i_2|cuenta[2]      ; ContadorRegistro:i_2|cuenta[0]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.380 ; RegDesp:i_5|desp_int[7]             ; RegDesp:i_5|desp_int[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; RegDesp:i_5|desp_int[4]             ; RegDesp:i_5|desp_int[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.386 ; Control:i_4|estado_act.EsperaBit    ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.386 ; Control:i_4|estado_act.Paridad      ; Control:i_4|estado_act.BitStop      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.388 ; Control:i_4|estado_act.EsperaBit    ; Control:i_4|estado_act.ActivaReg    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.540      ;
+; 0.441 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.593      ;
+; 0.441 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.593      ;
+; 0.449 ; Control:i_4|estado_act.BitStop      ; Control:i_4|estado_act.Rep          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.456 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.608      ;
+; 0.460 ; Control:i_4|estado_act.Rep          ; Control:i_4|estado_act.BitStart     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.612      ;
+; 0.466 ; Control:i_4|estado_act.ActivaReg    ; Control:i_4|estado_act.EsperaBit    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.618      ;
+; 0.498 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.509 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.516 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.533 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.538 ; Control:i_4|estado_act.BitStart     ; Control:i_4|estado_act.EsperaBit    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.690      ;
+; 0.541 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.693      ;
+; 0.544 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.551 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551 ; Contador1Bit:i_3|cuenta[9]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.557 ; Contador1Bit:i_3|cuenta[10]         ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.709      ;
+; 0.568 ; Contador1Bit:i_3|cuenta[8]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.572 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.724      ;
+; 0.579 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.586 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.738      ;
+; 0.587 ; DetectorFlanco:i_1|estado_act.Esp0  ; DetectorFlanco:i_1|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 0.739      ;
+; 0.596 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.748      ;
+; 0.603 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.614 ; Contador1Bit:i_3|cuenta[7]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.766      ;
+; 0.621 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.773      ;
+; 0.623 ; Control:i_4|estado_act.Rep          ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.775      ;
+; 0.631 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.783      ;
+; 0.638 ; Contador1Bit:i_3|cuenta[6]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.666 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.818      ;
+; 0.673 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.825      ;
+; 0.679 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.831      ;
+; 0.691 ; Contador1Bit:i_3|cuenta[9]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.843      ;
+; 0.697 ; Contador1Bit:i_3|cuenta[10]         ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.849      ;
+; 0.708 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.860      ;
+; 0.708 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.860      ;
+; 0.714 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.866      ;
+; 0.715 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.867      ;
+; 0.726 ; Contador1Bit:i_3|cuenta[9]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.878      ;
+; 0.743 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.895      ;
+; 0.743 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.895      ;
+; 0.749 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.901      ;
+; 0.750 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.902      ;
+; 0.760 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.912      ;
+; 0.765 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.778 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.778 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.784 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.785 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.937      ;
+; 0.795 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.947      ;
+; 0.800 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.952      ;
+; 0.813 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.965      ;
+; 0.813 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.965      ;
+; 0.813 ; DetectorFlanco:i_1|estado_act.Pulso ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.965      ;
+; 0.819 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.971      ;
+; 0.820 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[8]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.972      ;
+; 0.830 ; Contador1Bit:i_3|cuenta[1]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.835 ; Contador1Bit:i_3|cuenta[4]          ; Contador1Bit:i_3|cuenta[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.987      ;
+; 0.835 ; Control:i_4|estado_act.ActivaReg    ; Control:i_4|estado_act.Paridad      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.987      ;
+; 0.848 ; Contador1Bit:i_3|cuenta[2]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.000      ;
+; 0.848 ; Contador1Bit:i_3|cuenta[3]          ; Contador1Bit:i_3|cuenta[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.000      ;
+; 0.854 ; Contador1Bit:i_3|cuenta[5]          ; Contador1Bit:i_3|cuenta[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.006      ;
+; 0.855 ; Contador1Bit:i_3|cuenta[0]          ; Contador1Bit:i_3|cuenta[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.007      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; CalcParidad:i_6|parid_impar         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; CalcParidad:i_6|parid_impar         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[10]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[10]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[11]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[11]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[8]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[8]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[9]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1Bit:i_3|cuenta[9]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ContadorRegistro:i_2|cuenta[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.ActivaReg    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.ActivaReg    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.BitStart     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.BitStart     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.BitStop      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.BitStop      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.EsperaBit    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.EsperaBit    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.Paridad      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.Paridad      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; Control:i_4|estado_act.Rep          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; Control:i_4|estado_act.Rep          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Esp0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Esp0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; DetectorFlanco:i_1|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; RegDesp:i_5|desp_int[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; RegDesp:i_5|desp_int[7]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_1|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_1|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_2|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_2|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_2|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_2|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_2|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_2|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[0]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[10]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[10]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[11]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[11]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[1]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[2]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[3]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[4]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[4]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[5]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[5]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[6]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_3|cuenta[6]|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_3|cuenta[7]|clk                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; entrada[*]  ; clk        ; 2.032 ; 2.032 ; Rise       ; clk             ;
+;  entrada[0] ; clk        ; 1.805 ; 1.805 ; Rise       ; clk             ;
+;  entrada[1] ; clk        ; 1.878 ; 1.878 ; Rise       ; clk             ;
+;  entrada[2] ; clk        ; 1.867 ; 1.867 ; Rise       ; clk             ;
+;  entrada[3] ; clk        ; 1.717 ; 1.717 ; Rise       ; clk             ;
+;  entrada[4] ; clk        ; 1.955 ; 1.955 ; Rise       ; clk             ;
+;  entrada[5] ; clk        ; 1.825 ; 1.825 ; Rise       ; clk             ;
+;  entrada[6] ; clk        ; 1.945 ; 1.945 ; Rise       ; clk             ;
+;  entrada[7] ; clk        ; 2.032 ; 2.032 ; Rise       ; clk             ;
+; boton       ; clk        ; 1.565 ; 1.565 ; Fall       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; entrada[*]  ; clk        ; -1.435 ; -1.435 ; Rise       ; clk             ;
+;  entrada[0] ; clk        ; -1.519 ; -1.519 ; Rise       ; clk             ;
+;  entrada[1] ; clk        ; -1.523 ; -1.523 ; Rise       ; clk             ;
+;  entrada[2] ; clk        ; -1.505 ; -1.505 ; Rise       ; clk             ;
+;  entrada[3] ; clk        ; -1.435 ; -1.435 ; Rise       ; clk             ;
+;  entrada[4] ; clk        ; -1.608 ; -1.608 ; Rise       ; clk             ;
+;  entrada[5] ; clk        ; -1.486 ; -1.486 ; Rise       ; clk             ;
+;  entrada[6] ; clk        ; -1.602 ; -1.602 ; Rise       ; clk             ;
+;  entrada[7] ; clk        ; -1.695 ; -1.695 ; Rise       ; clk             ;
+; boton       ; clk        ; -1.444 ; -1.444 ; Fall       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; salida    ; clk        ; 4.221 ; 4.221 ; Rise       ; clk             ;
+; salida    ; clk        ; 4.552 ; 4.552 ; Fall       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; salida    ; clk        ; 3.940 ; 3.940 ; Rise       ; clk             ;
+; salida    ; clk        ; 4.096 ; 4.096 ; Fall       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.784  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -2.784  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -62.63  ; 0.0   ; 0.0      ; 0.0     ; -40.735             ;
+;  clk             ; -62.630 ; 0.000 ; N/A      ; N/A     ; -40.735             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; entrada[*]  ; clk        ; 4.769 ; 4.769 ; Rise       ; clk             ;
+;  entrada[0] ; clk        ; 4.084 ; 4.084 ; Rise       ; clk             ;
+;  entrada[1] ; clk        ; 4.315 ; 4.315 ; Rise       ; clk             ;
+;  entrada[2] ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  entrada[3] ; clk        ; 3.922 ; 3.922 ; Rise       ; clk             ;
+;  entrada[4] ; clk        ; 4.492 ; 4.492 ; Rise       ; clk             ;
+;  entrada[5] ; clk        ; 4.162 ; 4.162 ; Rise       ; clk             ;
+;  entrada[6] ; clk        ; 4.490 ; 4.490 ; Rise       ; clk             ;
+;  entrada[7] ; clk        ; 4.769 ; 4.769 ; Rise       ; clk             ;
+; boton       ; clk        ; 3.465 ; 3.465 ; Fall       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; entrada[*]  ; clk        ; -1.435 ; -1.435 ; Rise       ; clk             ;
+;  entrada[0] ; clk        ; -1.519 ; -1.519 ; Rise       ; clk             ;
+;  entrada[1] ; clk        ; -1.523 ; -1.523 ; Rise       ; clk             ;
+;  entrada[2] ; clk        ; -1.505 ; -1.505 ; Rise       ; clk             ;
+;  entrada[3] ; clk        ; -1.435 ; -1.435 ; Rise       ; clk             ;
+;  entrada[4] ; clk        ; -1.608 ; -1.608 ; Rise       ; clk             ;
+;  entrada[5] ; clk        ; -1.486 ; -1.486 ; Rise       ; clk             ;
+;  entrada[6] ; clk        ; -1.602 ; -1.602 ; Rise       ; clk             ;
+;  entrada[7] ; clk        ; -1.695 ; -1.695 ; Rise       ; clk             ;
+; boton       ; clk        ; -1.444 ; -1.444 ; Fall       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; salida    ; clk        ; 8.193 ; 8.193 ; Rise       ; clk             ;
+; salida    ; clk        ; 9.115 ; 9.115 ; Fall       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; salida    ; clk        ; 3.940 ; 3.940 ; Rise       ; clk             ;
+; salida    ; clk        ; 4.096 ; 4.096 ; Fall       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 263      ; 74       ; 78       ; 32       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 263      ; 74       ; 78       ; 32       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 50    ; 50   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Sat Feb 09 11:46:11 2019
+Info: Command: quartus_sta EmisorSerie -c EmisorSerie
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'EmisorSerie.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.784
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.784       -62.630 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -40.735 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.738
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.738       -15.799 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -33.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4563 megabytes
+    Info: Processing ended: Sat Feb 09 11:46:12 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

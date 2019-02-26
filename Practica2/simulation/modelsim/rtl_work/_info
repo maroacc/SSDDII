@@ -1,0 +1,330 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Practica2\simulation\modelsim
+Ecircuitocontrol
+Z1 w1549574091
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Practica2\simulation\modelsim
+Z6 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/circuitocontrol.vhd
+Z7 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/circuitocontrol.vhd
+l0
+L8
+VkF2bn05aQb@bo8`8[XAbd1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1550179087.759000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/circuitocontrol.vhd|
+Z11 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/circuitocontrol.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 zn<AMPgCNI`zFzg=[M^C43
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 15 circuitocontrol 0 22 kF2bn05aQb@bo8`8[XAbd1
+l33
+L22
+V[n8<TgBCiOB<kIZ][1jA;3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 LKO9;NENKZja1Oe7=zP<F3
+!i10b 1
+Econtadorm10
+Z14 w1550178319
+R2
+R3
+R4
+R5
+Z15 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/ContadorM10.vhd
+Z16 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/ContadorM10.vhd
+l0
+L7
+VogVB5mZLj:TY5W[D`0Qn33
+R8
+31
+Z17 !s108 1550179087.010000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/ContadorM10.vhd|
+Z19 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/ContadorM10.vhd|
+R12
+R13
+!s100 X3PTO]WI[SO:HA?[h4Pg>0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 contadorm10 0 22 ogVB5mZLj:TY5W[D`0Qn33
+l18
+L14
+Vb87Jgm=7XhAMM9HYLzAa=1
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 YJdJSz_^Xc;UVAPj3WHNV1
+!i10b 1
+Edetectorflanco
+Z20 w1549560202
+R3
+R4
+R5
+Z21 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/detectorflanco.vhd
+Z22 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/detectorflanco.vhd
+l0
+L6
+VRGV5fj]dc@HCC?MiQb6_R0
+R8
+31
+Z23 !s108 1550179087.467000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/detectorflanco.vhd|
+Z25 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/detectorflanco.vhd|
+R12
+R13
+!s100 OZhfOVeK^HE]zfLc<PGV@3
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 14 detectorflanco 0 22 RGV5fj]dc@HCC?MiQb6_R0
+l20
+L15
+VW>moIHgN=Ugc67m[iST>Y2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 95WY;R^MXQhCIE_^HE>3R3
+!i10b 1
+Egenerabitparidad
+Z26 w1549560205
+R2
+R3
+R4
+R5
+Z27 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/generabitparidad.vhd
+Z28 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/generabitparidad.vhd
+l0
+L11
+VH?gUz>`lnJ<@M^2Cf_D8W0
+R8
+31
+Z29 !s108 1550179088.431000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/generabitparidad.vhd|
+Z31 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/generabitparidad.vhd|
+R12
+R13
+!s100 eMNX^P=zzBY7D9Hnkm@^L2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 16 generabitparidad 0 22 H?gUz>`lnJ<@M^2Cf_D8W0
+l24
+L21
+VP@7fV5mhR<cKP]zKnAWFn3
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 RE8GYF[[hN]04Dh4>hg6_2
+!i10b 1
+Emux3a1
+Z32 w1549560208
+R3
+R4
+R5
+Z33 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/mux3a1.vhd
+Z34 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/mux3a1.vhd
+l0
+L4
+VnL:Q0O7U7hO>W73i:2bYW1
+R8
+31
+Z35 !s108 1550179088.697000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/mux3a1.vhd|
+Z37 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/mux3a1.vhd|
+R12
+R13
+!s100 1XiHoQ7QdKMnQY[Wk^0CC0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 6 mux3a1 0 22 nL:Q0O7U7hO>W73i:2bYW1
+l11
+L10
+VV=aMQc5o^<?8RIY^]3`Kb3
+R8
+31
+R35
+R36
+R37
+R12
+R13
+!s100 cCfcZFH^bFY`AoAaafEYh1
+!i10b 1
+Eregparser
+Z38 w1549560213
+R3
+R4
+R5
+Z39 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/regparser.vhd
+Z40 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/regparser.vhd
+l0
+L7
+V?JU9G;]:??IE[9a><1m>i2
+R8
+31
+Z41 !s108 1550179088.054000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/regparser.vhd|
+Z43 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/regparser.vhd|
+R12
+R13
+!s100 T0dkOB11;L0YaS1dRA];L2
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 9 regparser 0 22 ?JU9G;]:??IE[9a><1m>i2
+l19
+L17
+Vd@ZZQEl1V[8O]U`OV6kmb2
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 _<KMAS27`m?C4iPbC[@fF2
+!i10b 1
+Etemporizadorunbit
+Z44 w1549560217
+R2
+R3
+R4
+R5
+Z45 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/temporizadorunbit.vhd
+Z46 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/temporizadorunbit.vhd
+l0
+L9
+Vo5_I?JcN`2VE:G6SC=d573
+R8
+31
+Z47 !s108 1550179088.234000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/temporizadorunbit.vhd|
+Z49 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/temporizadorunbit.vhd|
+R12
+R13
+!s100 QOk_jACKLYbjjNP^ojd=D3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 17 temporizadorunbit 0 22 o5_I?JcN`2VE:G6SC=d573
+l19
+L15
+V;J^2CGB3fE1Gaa[0lc_<R3
+R8
+31
+R47
+R48
+R49
+R12
+R13
+!s100 [ODNS4M5SOOgj`TV1X6373
+!i10b 1
+Etransmisorserie
+Z50 w1550178329
+R3
+R4
+R5
+Z51 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/transmisorserie.vhd
+Z52 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/transmisorserie.vhd
+l0
+L7
+V3Ef]6NhHMO[=?1<nl=RQU0
+R8
+31
+Z53 !s108 1550179087.219000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/transmisorserie.vhd|
+Z55 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/transmisorserie.vhd|
+R12
+R13
+!s100 ;SE_D1miWZa9fPFFlTK^N0
+!i10b 1
+Astructural
+R3
+R4
+DEx4 work 15 transmisorserie 0 22 3Ef]6NhHMO[=?1<nl=RQU0
+l85
+L15
+VboFk[J<kIDUD]hj5NAJRB3
+R8
+31
+R53
+R54
+R55
+R12
+R13
+!s100 IL]VG4;dnl6DNo_EenoRX3
+!i10b 1
+Etransmisorserie_vhd_tst
+Z56 w1550179037
+R2
+R3
+R4
+R5
+Z57 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht
+Z58 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht
+l0
+L6
+VGdcCc;Hi7K`zEgH]AWfdE2
+!s100 `59Z6d3AdmENoO70ZBd[F2
+R8
+31
+!i10b 1
+Z59 !s108 1550179088.992000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht|
+Z61 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht|
+R12
+R13
+Atransmisorserie_arch
+R2
+R3
+R4
+DEx4 work 23 transmisorserie_vhd_tst 0 22 GdcCc;Hi7K`zEgH]AWfdE2
+l30
+L9
+VP;0Efm3@BmFdnh7;X=n0X0
+!s100 7_dgUeT?zeiNoB]13lJ9i1
+R8
+31
+!i10b 1
+R59
+R60
+R61
+R12
+R13

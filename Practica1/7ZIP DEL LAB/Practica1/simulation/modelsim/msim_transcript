@@ -1,0 +1,172 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ReceptorSerie_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/ContadorM8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ContadorM8
+# -- Compiling architecture behavioral of ContadorM8
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/DetectorFlanco.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DetectorFlanco
+# -- Compiling architecture behavioral of DetectorFlanco
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/DetErrorParidad.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DetErrorParidad
+# -- Compiling architecture behavioral of DetErrorParidad
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/ReceptorSerie.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ReceptorSerie
+# -- Compiling architecture structural of ReceptorSerie
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/RegDesplDcha.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RegDesplDcha
+# -- Compiling architecture behavioral of RegDesplDcha
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/TemporizadorMedioBit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TemporizadorMedioBit
+# -- Compiling architecture behavioral of TemporizadorMedioBit
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/TemporizadorUnBit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TemporizadorUnBit
+# -- Compiling architecture behavioral of TemporizadorUnBit
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/UnidadControl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity UnidadControl
+# -- Compiling architecture behavioral of UnidadControl
+# 
+# vcom -93 -work work {D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ReceptorSerie_vhd_tst
+# -- Compiling architecture ReceptorSerie_arch of ReceptorSerie_vhd_tst
+# ** Warning: [4] D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht(13): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht(89): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 8 is not equal to right length 9).
+# 
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  ReceptorSerie_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ReceptorSerie_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.receptorserie_vhd_tst(receptorserie_arch)
+# Loading work.receptorserie(structural)
+# Loading work.detectorflanco(behavioral)
+# Loading work.temporizadormediobit(behavioral)
+# Loading work.temporizadorunbit(behavioral)
+# Loading work.contadorm8(behavioral)
+# Loading work.unidadcontrol(behavioral)
+# Loading work.deterrorparidad(behavioral)
+# Loading work.regdespldcha(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /receptorserie_vhd_tst/i1/ContadorM8_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /receptorserie_vhd_tst/i1/TemporizadorUnBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /receptorserie_vhd_tst/i1/TemporizadorMedioBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /receptorserie_vhd_tst/i1/TemporizadorMedioBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /receptorserie_vhd_tst/i1/TemporizadorUnBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /receptorserie_vhd_tst/i1/ContadorM8_i
+# ** Error: Assertion violation.
+#    Time: 573113001 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Warning: Error: salida del registro errónea
+#    Time: 573113001 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Error: Assertion violation.
+#    Time: 1146126002 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Warning: Error: salida del registro errónea
+#    Time: 1146126002 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Failure: Error. Se enciende el Led de error de paridad cuando no debería
+#    Time: 1146226002 ps  Iteration: 0  Process: /receptorserie_vhd_tst/always File: D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht
+# Break in ForLoop loop at D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht line 103
+# Simulation Breakpoint: Break in ForLoop loop at D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht line 103
+# MACRO ./ReceptorSerie_run_msim_rtl_vhdl.do PAUSED at line 24
+add wave -position end  sim:/receptorserie_vhd_tst/i1/UnidadControl_i/estado_actual
+restart
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /receptorserie_vhd_tst/i1/ContadorM8_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /receptorserie_vhd_tst/i1/TemporizadorUnBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /receptorserie_vhd_tst/i1/TemporizadorMedioBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /receptorserie_vhd_tst/i1/TemporizadorMedioBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /receptorserie_vhd_tst/i1/TemporizadorUnBit_i
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /receptorserie_vhd_tst/i1/ContadorM8_i
+# ** Error: Assertion violation.
+#    Time: 573113001 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Warning: Error: salida del registro errónea
+#    Time: 573113001 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Error: Assertion violation.
+#    Time: 1146126002 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Warning: Error: salida del registro errónea
+#    Time: 1146126002 ps  Iteration: 0  Instance: /receptorserie_vhd_tst
+# ** Failure: Error. Se enciende el Led de error de paridad cuando no debería
+#    Time: 1146226002 ps  Iteration: 0  Process: /receptorserie_vhd_tst/always File: D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht
+# Break in ForLoop loop at D:/AlfonsoMariajoDig/Practica1/simulation/modelsim/ReceptorSerie.vht line 103
+run -over
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+# Next activity is in 1 ps.
+run -step
+run -step
+run -step
+run -step
+run -step

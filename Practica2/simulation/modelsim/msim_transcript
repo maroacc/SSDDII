@@ -1,0 +1,91 @@
+# Reading C:/Intel Altera/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do TransmisorSerie_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\Intel Altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\Intel Altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {TransmisorSerie.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity TransmisorSerie
+# -- Compiling architecture structure of TransmisorSerie
+# 
+# vcom -93 -work work {C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TransmisorSerie_vhd_tst
+# -- Compiling architecture TransmisorSerie_arch of TransmisorSerie_vhd_tst
+# ** Warning: [4] C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht(11): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=TransmisorSerie_vhd.sdo -L cycloneii -L gate_work -L work -voptargs="+acc"  TransmisorSerie_vhd_tst
+# vsim +transport_int_delays +transport_path_delays -L cycloneii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /i1=TransmisorSerie_vhd.sdo -t 1ps TransmisorSerie_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.transmisorserie_vhd_tst(transmisorserie_arch)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.transmisorserie(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading instances from TransmisorSerie_vhd.sdo
+# Loading timing data from TransmisorSerie_vhd.sdo
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /transmisorserie_vhd_tst File: C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Maroa  Hostname: LAPTOP-UHS9FKJ3  ProcessID: 14028
+# 
+#           Attempting to use alternate WLF file "./wlftcf326h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftcf326h
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: */LCELL_FF HOLD  Low VIOLATION ON SDATA WITH RESPECT TO CLK;
+# 
+#   Expected := 0.286 ns; Observed := 0.205 ns; At : 521353.072 ns
+#    Time: 521353072 ps  Iteration: 4  Instance: /transmisorserie_vhd_tst/i1/\CircuitoControl_i|estado_actual.Espera1Bit\
+# ** Failure: Error en el bit de Start
+#    Time: 573042 ns  Iteration: 0  Process: /transmisorserie_vhd_tst/always File: C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht
+# Break in ForLoop loop at C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht line 69
+# Simulation Breakpoint: Break in ForLoop loop at C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica2/simulation/modelsim/TransmisorSerie.vht line 69
+# MACRO ./TransmisorSerie_run_msim_gate_vhdl.do PAUSED at line 17

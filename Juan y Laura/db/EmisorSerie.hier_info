@@ -1,0 +1,187 @@
+|EmisorSerie
+entrada[0] => RegDesp:i_5.carga[0]
+entrada[0] => CalcParidad:i_6.reg[0]
+entrada[1] => RegDesp:i_5.carga[1]
+entrada[1] => CalcParidad:i_6.reg[1]
+entrada[2] => RegDesp:i_5.carga[2]
+entrada[2] => CalcParidad:i_6.reg[2]
+entrada[3] => RegDesp:i_5.carga[3]
+entrada[3] => CalcParidad:i_6.reg[3]
+entrada[4] => RegDesp:i_5.carga[4]
+entrada[4] => CalcParidad:i_6.reg[4]
+entrada[5] => RegDesp:i_5.carga[5]
+entrada[5] => CalcParidad:i_6.reg[5]
+entrada[6] => RegDesp:i_5.carga[6]
+entrada[6] => CalcParidad:i_6.reg[6]
+entrada[7] => RegDesp:i_5.carga[7]
+entrada[7] => CalcParidad:i_6.reg[7]
+boton => DetectorFlanco:i_1.e
+clk => DetectorFlanco:i_1.clk
+clk => ContadorRegistro:i_2.clk
+clk => Contador1Bit:i_3.clk
+clk => Control:i_4.clk
+clk => RegDesp:i_5.clk
+clk => CalcParidad:i_6.clk
+reset_n => DetectorFlanco:i_1.reset_n
+reset_n => ContadorRegistro:i_2.reset_n
+reset_n => Contador1Bit:i_3.reset_n
+reset_n => Control:i_4.reset_n
+reset_n => RegDesp:i_5.reset_n
+reset_n => CalcParidad:i_6.reset_n
+salida <= MuxEmi:i_7.salida
+
+
+|EmisorSerie|DetectorFlanco:i_1
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN0
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EmisorSerie|ContadorRegistro:i_2
+en => process_0.IN1
+reset_n => cuenta[0].ACLR
+reset_n => cuenta[1].ACLR
+reset_n => cuenta[2].ACLR
+clk => cuenta[0].CLK
+clk => cuenta[1].CLK
+clk => cuenta[2].CLK
+finCuenta <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EmisorSerie|Contador1Bit:i_3
+enable => process_0.IN1
+enable => salida.IN1
+clk => cuenta[0].CLK
+clk => cuenta[1].CLK
+clk => cuenta[2].CLK
+clk => cuenta[3].CLK
+clk => cuenta[4].CLK
+clk => cuenta[5].CLK
+clk => cuenta[6].CLK
+clk => cuenta[7].CLK
+clk => cuenta[8].CLK
+clk => cuenta[9].CLK
+clk => cuenta[10].CLK
+clk => cuenta[11].CLK
+reset_n => cuenta[0].ACLR
+reset_n => cuenta[1].ACLR
+reset_n => cuenta[2].ACLR
+reset_n => cuenta[3].ACLR
+reset_n => cuenta[4].ACLR
+reset_n => cuenta[5].ACLR
+reset_n => cuenta[6].ACLR
+reset_n => cuenta[7].ACLR
+reset_n => cuenta[8].ACLR
+reset_n => cuenta[9].ACLR
+reset_n => cuenta[10].ACLR
+reset_n => cuenta[11].ACLR
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EmisorSerie|Control:i_4
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt => estado_sig.OUTPUTSELECT
+fin_cnt_reg => estado_sig.DATAB
+fin_cnt_reg => estado_sig.DATAB
+pulso => estado_sig.OUTPUTSELECT
+pulso => estado_sig.OUTPUTSELECT
+pulso => estado_sig.OUTPUTSELECT
+pulso => estado_sig.OUTPUTSELECT
+pulso => estado_sig.OUTPUTSELECT
+pulso => estado_sig.OUTPUTSELECT
+cero_start <= <GND>
+uno_stop <= <VCC>
+cargar <= cargar.DB_MAX_OUTPUT_PORT_TYPE
+en_cnt <= en_cnt.DB_MAX_OUTPUT_PORT_TYPE
+en_reg <= en_reg.DB_MAX_OUTPUT_PORT_TYPE
+sel_mux[0] <= sel_mux.DB_MAX_OUTPUT_PORT_TYPE
+sel_mux[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EmisorSerie|RegDesp:i_5
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+enable => desp_int.OUTPUTSELECT
+clk => desp_int[0].CLK
+clk => desp_int[1].CLK
+clk => desp_int[2].CLK
+clk => desp_int[3].CLK
+clk => desp_int[4].CLK
+clk => desp_int[5].CLK
+clk => desp_int[6].CLK
+clk => desp_int[7].CLK
+reset_n => desp_int[0].ACLR
+reset_n => desp_int[1].ACLR
+reset_n => desp_int[2].ACLR
+reset_n => desp_int[3].ACLR
+reset_n => desp_int[4].ACLR
+reset_n => desp_int[5].ACLR
+reset_n => desp_int[6].ACLR
+reset_n => desp_int[7].ACLR
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+cargar => desp_int.OUTPUTSELECT
+carga[0] => desp_int.DATAB
+carga[1] => desp_int.DATAB
+carga[2] => desp_int.DATAB
+carga[3] => desp_int.DATAB
+carga[4] => desp_int.DATAB
+carga[5] => desp_int.DATAB
+carga[6] => desp_int.DATAB
+carga[7] => desp_int.DATAB
+salida <= desp_int[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EmisorSerie|CalcParidad:i_6
+reg[0] => parid_impar.IN0
+reg[1] => parid_impar.IN1
+reg[2] => parid_impar.IN1
+reg[3] => parid_impar.IN1
+reg[4] => parid_impar.IN1
+reg[5] => parid_impar.IN1
+reg[6] => parid_impar.IN1
+reg[7] => parid_impar.IN1
+paridad <= parid_impar.DB_MAX_OUTPUT_PORT_TYPE
+reset_n => parid_impar.PRESET
+clk => parid_impar.CLK
+
+
+|EmisorSerie|MuxEmi:i_7
+sel[0] => Mux0.IN1
+sel[1] => Mux0.IN0
+start => Mux0.IN2
+datos => Mux0.IN3
+paridad => Mux0.IN4
+stop_sal => Mux0.IN5
+salida <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,19 @@
+
+State Machine - |ReceptorSerie|UnidadControl:UnidadControl_i|estado_actual
+Name estado_actual.ErrorTrama estado_actual.CompruebaStop estado_actual.EsperaStop estado_actual.ErrorParidad estado_actual.CompruebaParidad estado_actual.EsperaBitParidad estado_actual.Registra estado_actual.Espera1Bit estado_actual.Espera0Start estado_actual.Reposo 
+estado_actual.Reposo 0 0 0 0 0 0 0 0 0 0 
+estado_actual.Espera0Start 0 0 0 0 0 0 0 0 1 1 
+estado_actual.Espera1Bit 0 0 0 0 0 0 0 1 0 1 
+estado_actual.Registra 0 0 0 0 0 0 1 0 0 1 
+estado_actual.EsperaBitParidad 0 0 0 0 0 1 0 0 0 1 
+estado_actual.CompruebaParidad 0 0 0 0 1 0 0 0 0 1 
+estado_actual.ErrorParidad 0 0 0 1 0 0 0 0 0 1 
+estado_actual.EsperaStop 0 0 1 0 0 0 0 0 0 1 
+estado_actual.CompruebaStop 0 1 0 0 0 0 0 0 0 1 
+estado_actual.ErrorTrama 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |ReceptorSerie|DetectorFlanco:DetectorFlanco_i|estado_act
+Name estado_act.Esp0 estado_act.Pulso estado_act.Esp1 
+estado_act.Esp1 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp0 1 0 1 

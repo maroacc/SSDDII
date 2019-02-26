@@ -1,0 +1,150 @@
+-- Vhdl Test Bench template for design  :  DetErrorParidad
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY DetErrorParidad_vhd_tst IS
+END DetErrorParidad_vhd_tst;
+
+ARCHITECTURE DetErrorParidad_arch OF DetErrorParidad_vhd_tst IS
+-- constants
+-- signals
+constant c_clk_semiperiod : time := 10ns;
+SIGNAL clk : STD_LOGIC:= '0';
+SIGNAL comprobar : STD_LOGIC;
+SIGNAL e_s : STD_LOGIC;
+SIGNAL en : STD_LOGIC;
+SIGNAL error : STD_LOGIC;
+SIGNAL reset_n : STD_LOGIC;
+
+  COMPONENT DetErrorParidad
+  	PORT (
+  	clk : IN STD_LOGIC;
+  	comprobar : IN STD_LOGIC;
+  	e_s : IN STD_LOGIC;
+  	en : IN STD_LOGIC;
+  	error : OUT STD_LOGIC;
+  	reset_n : IN STD_LOGIC
+  	);
+  END COMPONENT;
+
+  signal dato : std_logic_vector(8 downto 0); --8 Bits + paridad
+
+
+BEGIN --architecture
+
+	i1 : DetErrorParidad
+	PORT MAP (
+	clk => clk,
+	comprobar => comprobar,
+	e_s => e_s,
+	en => en,
+	error => error,
+	reset_n => reset_n
+	);
+
+  clk <= not clk after c_clk_semiperiod;
+
+always : PROCESS
+
+ variable paridad : std_logic;
+
+-- Función para enviar vectores en serie
+procedure SendSerial (
+  signal serie_out: out std_logic; -- Salida serie
+  signal enable   : out std_logic;
+  signal dato_env : in std_logic_vector(8 downto 0);
+  signal comprobar: out std_logic) is
+    begin
+      for i in 8 downto 1 loop -- Desplaza a izq
+        -- Enviamos el bit correspondiente a la salida
+        serie_out <= dato_env(i);
+        --Damos un pulso en el Enable
+        enable <= '1';
+        wait for 20 ns;
+        enable <= '0';
+        wait for 52083 ns;
+       end loop; -- i
+
+		 en<= '1';
+		 comprobar <= '1';
+		 serie_out <= dato_env(0);
+		 wait for 20 ns;
+		 enable <= '0';
+		 comprobar<= '0';
+		 wait for 52083 ns;
+ end SendSerial;
+
+--Función para calcular la paridad
+function CalcParidad (dato_in : std_logic_vector)
+return std_logic is
+variable resultado : std_logic;
+  begin --function
+
+  resultado := '0';
+  for i in 0 to dato_in'length -1 loop
+    resultado := resultado xor dato_in(i);
+  end loop;
+
+  return resultado;
+end CalcParidad;
+
+BEGIN    --process always
+
+--Inicialización de las variables
+e_s <= '1';
+comprobar <= '0';
+en <= '0';
+paridad := '1';
+--Acctivamos el reset durante 100 ns
+reset_n <= '0';
+dato <= (others => '0');
+
+wait for 100 ns;
+reset_n <= '1';
+wait for 5 ns;
+
+for i in 0 to 511 loop --prueba todos los valores posibles para dato
+
+		dato <= std_logic_vector(to_unsigned(i, 9));
+		wait for 1 ps;
+
+		SendSerial(e_s, en, dato, comprobar);
+		paridad := CalcParidad(dato);
+
+		if paridad = '0' then
+			assert paridad = '0';
+			report "La paridad es 0"
+			severity warning;
+		end if;
+
+		if paridad = '1' then
+			assert paridad = '1';
+			report "La paridad es 1"
+			severity warning;
+		end if;
+
+
+		if paridad = '0' then
+			assert error = '1'
+			report "El led no se enciende cuando hay error de paridad"
+			severity failure;
+		end if;
+
+		if paridad = '1' then
+			assert error = '0'
+			report "El led se enciende cuando no hay error de paridad"
+			severity failure;
+		end if;
+
+		assert false
+		report "Fin de la simulación"
+		severity failure;
+end loop;
+
+
+
+WAIT;
+END PROCESS always;
+END DetErrorParidad_arch;

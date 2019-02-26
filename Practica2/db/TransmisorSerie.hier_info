@@ -1,0 +1,209 @@
+|TransmisorSerie
+clk => DetectorFlanco:DetectorFlanco_i.clk
+clk => CircuitoControl:CircuitoControl_i.clk
+clk => RegParSer:RegParSer_i.clk
+clk => TemporizadorUnBit:TemporizadorUnBit_i.clk
+clk => ContadorM10:ContadorM10_i.clk
+clk => GeneraBitParidad:GeneraBitParidad_i.clk
+reset_n => DetectorFlanco:DetectorFlanco_i.reset
+reset_n => CircuitoControl:CircuitoControl_i.reset_n
+reset_n => RegParSer:RegParSer_i.reset_n
+reset_n => TemporizadorUnBit:TemporizadorUnBit_i.reset_n
+reset_n => ContadorM10:ContadorM10_i.reset_n
+reset_n => GeneraBitParidad:GeneraBitParidad_i.reset_n
+e_p[0] => GeneraBitParidad:GeneraBitParidad_i.e_p[0]
+e_p[0] => RegParSer:RegParSer_i.e_p[0]
+e_p[1] => GeneraBitParidad:GeneraBitParidad_i.e_p[1]
+e_p[1] => RegParSer:RegParSer_i.e_p[1]
+e_p[2] => GeneraBitParidad:GeneraBitParidad_i.e_p[2]
+e_p[2] => RegParSer:RegParSer_i.e_p[2]
+e_p[3] => GeneraBitParidad:GeneraBitParidad_i.e_p[3]
+e_p[3] => RegParSer:RegParSer_i.e_p[3]
+e_p[4] => GeneraBitParidad:GeneraBitParidad_i.e_p[4]
+e_p[4] => RegParSer:RegParSer_i.e_p[4]
+e_p[5] => GeneraBitParidad:GeneraBitParidad_i.e_p[5]
+e_p[5] => RegParSer:RegParSer_i.e_p[5]
+e_p[6] => GeneraBitParidad:GeneraBitParidad_i.e_p[6]
+e_p[6] => RegParSer:RegParSer_i.e_p[6]
+e_p[7] => GeneraBitParidad:GeneraBitParidad_i.e_p[7]
+e_p[7] => RegParSer:RegParSer_i.e_p[7]
+pulsador => DetectorFlanco:DetectorFlanco_i.e
+s_s <= Mux3a1:Mux3a1_i.s
+
+
+|TransmisorSerie|DetectorFlanco:DetectorFlanco_i
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN1
+reset => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TransmisorSerie|CircuitoControl:CircuitoControl_i
+clk => estado_actual~1.DATAIN
+reset_n => estado_actual~3.DATAIN
+pulsador => estado_siguiente.OUTPUTSELECT
+pulsador => estado_siguiente.OUTPUTSELECT
+pulsador => estado_siguiente.OUTPUTSELECT
+pulsador => estado_siguiente.OUTPUTSELECT
+contador_un_bit => estado_siguiente.OUTPUTSELECT
+contador_un_bit => estado_siguiente.OUTPUTSELECT
+contador_un_bit => estado_siguiente.OUTPUTSELECT
+contador_un_bit => estado_siguiente.OUTPUTSELECT
+contador_M10 => Selector0.IN3
+contador_M10 => Selector4.IN2
+contador_M10 => en_registro.DATAB
+contador_M10 => en_contador_M10.DATAB
+contador_M10 => Selector3.IN3
+carga <= carga.DB_MAX_OUTPUT_PORT_TYPE
+s_multiplex[0] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+s_multiplex[1] <= s_multiplex[1].DB_MAX_OUTPUT_PORT_TYPE
+en_contador_un_bit <= en_contador_un_bit.DB_MAX_OUTPUT_PORT_TYPE
+en_contador_M10 <= en_contador_M10.DB_MAX_OUTPUT_PORT_TYPE
+en_registro <= en_registro.DB_MAX_OUTPUT_PORT_TYPE
+en_calc_paridad <= en_calc_paridad.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TransmisorSerie|RegParSer:RegParSer_i
+clk => registro[0].CLK
+clk => registro[1].CLK
+clk => registro[2].CLK
+clk => registro[3].CLK
+clk => registro[4].CLK
+clk => registro[5].CLK
+clk => registro[6].CLK
+clk => registro[7].CLK
+clk => registro[8].CLK
+clk => registro[9].CLK
+reset_n => registro[0].ACLR
+reset_n => registro[1].ACLR
+reset_n => registro[2].ACLR
+reset_n => registro[3].ACLR
+reset_n => registro[4].ACLR
+reset_n => registro[5].ACLR
+reset_n => registro[6].ACLR
+reset_n => registro[7].ACLR
+reset_n => registro[8].ACLR
+reset_n => registro[9].ACLR
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+carga => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+desplaza => registro.OUTPUTSELECT
+e_p[0] => registro.DATAB
+e_p[1] => registro.DATAB
+e_p[2] => registro.DATAB
+e_p[3] => registro.DATAB
+e_p[4] => registro.DATAB
+e_p[5] => registro.DATAB
+e_p[6] => registro.DATAB
+e_p[7] => registro.DATAB
+e_p[8] => registro.DATAB
+s_s <= registro[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TransmisorSerie|TemporizadorUnBit:TemporizadorUnBit_i
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+reset_n => contador[0].ACLR
+reset_n => contador[1].ACLR
+reset_n => contador[2].ACLR
+reset_n => contador[3].ACLR
+reset_n => contador[4].ACLR
+reset_n => contador[5].ACLR
+reset_n => contador[6].ACLR
+reset_n => contador[7].ACLR
+reset_n => contador[8].ACLR
+reset_n => contador[9].ACLR
+reset_n => contador[10].ACLR
+reset_n => contador[11].ACLR
+en => s.IN1
+en => contador[11].ENA
+en => contador[10].ENA
+en => contador[9].ENA
+en => contador[8].ENA
+en => contador[7].ENA
+en => contador[6].ENA
+en => contador[5].ENA
+en => contador[4].ENA
+en => contador[3].ENA
+en => contador[2].ENA
+en => contador[1].ENA
+en => contador[0].ENA
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TransmisorSerie|ContadorM10:ContadorM10_i
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+reset_n => contador[0].ACLR
+reset_n => contador[1].ACLR
+reset_n => contador[2].ACLR
+reset_n => contador[3].ACLR
+en => s.IN1
+en => contador[0].ENA
+en => contador[3].ENA
+en => contador[2].ENA
+en => contador[1].ENA
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TransmisorSerie|GeneraBitParidad:GeneraBitParidad_i
+clk => bit_paridad~reg0.CLK
+clk => paridad.CLK
+reset_n => bit_paridad~reg0.PRESET
+reset_n => paridad.ACLR
+e_p[0] => paridad.IN0
+e_p[1] => paridad.IN1
+e_p[2] => paridad.IN0
+e_p[3] => paridad.IN1
+e_p[4] => paridad.IN0
+e_p[5] => paridad.IN1
+e_p[6] => paridad.IN0
+e_p[7] => paridad.IN1
+en => paridad.ENA
+bit_paridad <= bit_paridad~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TransmisorSerie|Mux3a1:Mux3a1_i
+e2 => Mux0.IN1
+e1 => Mux0.IN2
+e0 => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+s <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,110 @@
+entity SumaRestaNBits is
+generic (g_data_w : integer := 32); -- No bits de los datos
+port (
+  a, b : in std_logic_vector (g_data_w -1 downto 0);
+  sn_r : in std_logic ; -- 0 suma, 1 resta
+  s : out std_logic_vector (g_data_w -1 downto 0);
+  ov : out std_logic ; -- Desbordamiento (para C-2)
+  c_out : out std_logic ); -- Acarreo (para unsigned)
+end SumaRestaNBits ;
+
+--TestBench para sumador restador de N bits con overflow y c_out
+library ieee;
+  use ieee.std_logic_1164.all;
+  use iee.numeric_std.all;
+
+entity SumaRestaNBits_vhd_tst is
+end SumaRestaNBits_vhd_tst;
+
+architecture SumaRestaNBits_arch of SumarestaNBits is
+  --señales
+  signal a, b  : std_logic_vector (g_data_w -1 downto 0);
+  signal sn_r  : std_logic;
+  signal s     : std_logic_vector (g_data_w -1 downto 0);
+  signal ov    : std_logic;
+  signal c_out : std_logic;
+
+  component SumaRestaNBits
+  generic (
+    g_data_w : integer := 32
+  );
+  port (
+    b     : in  std_logic_vector (g_data_w -1 downto 0);
+    sn_r  : in  std_logic;
+    s     : out std_logic_vector (g_data_w -1 downto 0);
+    ov    : out std_logic;
+    c_out : out std_logic
+  );
+  end component SumaRestaNBits;
+
+  --señales internas
+  -- a + b en g_data_w + 1 bits
+  signal a_mas_b   : std_logic_vector (4 downto 0);
+  signal a_menos_n : std_logic_vector (3 downto 0);
+
+begin --architecture
+
+SumaRestaNBits_i : SumaRestaNBits
+  generic map (g_data_w => 4)
+
+  port map (
+  a     => a,
+  b     => b,
+  sn_r  => sn_r,
+  s     => s,
+  ov    => ov,
+  c_out => c_out
+  );
+
+
+  always : process
+
+  begin --process always
+
+  --Inicialización de las variables
+  a <= (others => '0');
+  b <= (others => '0');
+  sn_r <= '0';
+
+    for i in 0 to 3 loop
+      --Usa g_data_w + 1 bits para tener en cuenta el acarreo
+      a <= std_logic_vector(to_unsigned(i, 4));
+      wait for 1 ps;
+
+        for j in 0 to 3 loop
+          b <= std_logic_vector(to_unsigned(j, 4));
+          wait for 1 ps;
+          a_mas_b <= std_logic_vector(unsigned('0' & a) + unsigned ('0' & b));
+          a_menos_b <= std_logic_vector(unsigned(a) - unsigned(b));
+          wait for 1 ps;
+
+          --Prueba de la suma
+          sn_r <= '0';
+          wait for 100 ns;
+          assert s = a_mas_b(3 downto 0)
+          report "Error en la suma"
+          severity failure;
+
+          assert c_out = a_mas_b(4)
+          report "Error de acarreo de salida"
+          severity failure;
+
+          --Prueba de la resta
+          sn_r <= '1';
+          wait for 100 ns;
+          assert s = a_menos_b
+          report "Error en la suma"
+          severity failure;
+
+          if a < b then
+            assert c_out = '1'
+            report "Error de acarreo de salida"
+            severity failure;
+          end if;
+
+        end loop;
+   end loop;
+
+	end process; --always
+
+	end SumaRestaNBits_arch;

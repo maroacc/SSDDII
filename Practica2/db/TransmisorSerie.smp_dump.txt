@@ -1,0 +1,13 @@
+
+State Machine - |TransmisorSerie|CircuitoControl:CircuitoControl_i|estado_actual
+Name estado_actual.Espera1Bit estado_actual.Registra estado_actual.EnviaStart estado_actual.Reposo 
+estado_actual.Reposo 0 0 0 0 
+estado_actual.EnviaStart 0 0 1 1 
+estado_actual.Registra 0 1 0 1 
+estado_actual.Espera1Bit 1 0 0 1 
+
+State Machine - |TransmisorSerie|DetectorFlanco:DetectorFlanco_i|estado_act
+Name estado_act.Esp0 estado_act.Pulso estado_act.Esp1 
+estado_act.Esp1 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp0 1 0 1 

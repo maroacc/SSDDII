@@ -1,0 +1,39 @@
+--Contador Módulo 9 Ascendente con habilitador de la cuenta
+
+library ieee;
+	 use ieee. std_logic_1164 .all;
+	 use ieee.numeric_std.all;
+
+entity ContadorM9 is
+  port (
+	clk, reset_n 	: in std_logic;
+          	en           		: in std_logic;   --Enable. 1 cuenta 0 mantiene
+          	s            		: out std_logic); --Salida. 1 al acabar la cuenta
+end ContadorM9;
+
+architecture behavioral of ContadorM9 is
+
+  signal contador : unsigned(3 downto 0);
+
+  begin --Behavioral
+
+    ContadorM9Asc : process(clk, reset_n, en)
+      begin --process ContadorM1302
+        if reset_n = '0' then
+          contador <= (others => '0');
+        elsif clk'event and clk = '1' then
+          if en = '1' then
+            if contador = to_unsigned(9, 4) then
+              --Cuando llega a 9 vuelve a ponerse a 0
+              contador <= (others => '0');
+            else
+              contador <= contador + 1;
+            end if;
+          end if;
+        end if;
+    end process ContadorM9Asc;
+
+    s <= '1' when contador = to_unsigned(9, 4) and en = '1' else
+         '0';
+
+end behavioral;

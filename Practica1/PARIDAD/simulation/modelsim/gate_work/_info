@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Practica1\PARIDAD\simulation\modelsim
+Edeterrorparidad
+Z1 w1548586227
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 Oi3I0k`LZ6YG;P<IP9P3W1
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 0WXB<Sgk6hOd5>ljP5KG63
+Z8 dC:\Users\Maroa\Documents\ICAI\Sistemas Digitales\SISTEMAS DIGITALES II\Practica1\PARIDAD\simulation\modelsim
+Z9 8DetErrorParidad.vho
+Z10 FDetErrorParidad.vho
+l0
+L34
+VCoW2E^0CoHK>TZcF?F1Yb1
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1548586300.779000
+Z13 !s90 -reportprogress|300|-93|-work|work|DetErrorParidad.vho|
+Z14 !s107 DetErrorParidad.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 dI4F_dQiB1@h?2LHR@KJ62
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 15 deterrorparidad 0 22 CoW2E^0CoHK>TZcF?F1Yb1
+l85
+L54
+V4ZWX?noReCb`]f6;<IV^11
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 OK;2nNK0LTaLADg?AU2KW1
+!i10b 1
+Edeterrorparidad_vhd_tst
+Z17 w1548586210
+Z18 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R5
+R6
+R8
+Z19 8C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/PARIDAD/simulation/modelsim/DetErrorParidad.vht
+Z20 FC:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/PARIDAD/simulation/modelsim/DetErrorParidad.vht
+l0
+L7
+V<B[[^A^Z1>Tj^zjzzC=Iz3
+!s100 ]KB6noCBUjc:4b9cHMI7f1
+R11
+31
+!i10b 1
+Z21 !s108 1548586300.911000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/PARIDAD/simulation/modelsim/DetErrorParidad.vht|
+Z23 !s107 C:/Users/Maroa/Documents/ICAI/Sistemas Digitales/SISTEMAS DIGITALES II/Practica1/PARIDAD/simulation/modelsim/DetErrorParidad.vht|
+R15
+R16
+Adeterrorparidad_arch
+R18
+R5
+R6
+DEx4 work 23 deterrorparidad_vhd_tst 0 22 <B[[^A^Z1>Tj^zjzzC=Iz3
+l35
+L10
+V:<kJ;z4nl1D_hl87XA8Ad3
+!s100 E>fgdcAb3eTAQ[DB=F`zH3
+R11
+31
+!i10b 1
+R21
+R22
+R23
+R15
+R16
