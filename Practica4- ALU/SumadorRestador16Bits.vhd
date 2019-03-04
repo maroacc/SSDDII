@@ -1,43 +1,25 @@
--- Sumador restador para números de 16 bits.
---Lo diseñaremos conectando en serie 16 sumadores de 1 bit
+-- Sumador para números de 4 bits.
+-- Se usa una descripci ón en alto nivel usando el
+-- operador suma con tipos unsigned.
 
 library ieee;
-use ieee.std_logic_1164.all;
+use ieee. std_logic_1164 .all;
+use ieee. numeric_std .all;
 
-entity SumaResta16Bits is
-	port(
-		a, b : in std_logic_vector(4 downto 0); --Entradas
-		s_r : in std_logic;
-		s : out std_logic_vector(15 downto 0); --Salida
-		ov : out std_logic); --Acarreo de salida
+entity Sumador4BitsAN is
+ port (
+ a, b : in std_logic_vector (15 downto 0); -- Entradas
+ s : out std_logic_vector (15 downto 0); -- Salida
+ co : out std_logic ); -- Acarreo de salida
 
-end SumaResta16Bits;
+ end Sumador4BitsAN ;
 
-architecture structural of SumaResta16Bits is
-	signal c : std_logic_vector(5 downto 0); --(acarr. intermed.)
-	signal b_i : std_logic_vector (15 downto 0);
+ architecture behavioral of Sumador4BitsAN is
+ signal s_int : signed (16 downto 0);
+ begin -- behavioral
 
-component Sumador1Bit
-		port(
-			a_i, b_i  :  in std_logic;
-			c_i  :  in std_logic;
-			s_i  :  out std_logic;
-			c_i_mas_1 : out std_logic);
-	end component;
+ s_int <= signed ('0'& a)+ signed ('0'&b);
+ s <= std_logic_vector (s_int (15 downto 0));
+ co <= s_int (16);
 
-begin --(structural)
-	c(0) <= s_r;
-	ov <= c(16) xor c(15);
-
-	b_i <= b xor s_r&s_r&s_r&s_r&s_r;
-
-	GenSum : for i in 0 to 15 generate
-		i_Sumador1Bit : Sumador1Bit
-			port map(
-				a_i => a(i),
-				b_i => b_i(i),
-				c_i => c(i),
-				s_i => s(i),
-				c_i_mas_1 => c(i+1));
-	end generate GenSum;
-end structural;
+ end behavioral ;
