@@ -6,20 +6,23 @@ library ieee;
 use ieee. std_logic_1164 .all;
 use ieee. numeric_std .all;
 
-entity Sumador4BitsAN is
+entity SumadorRestador16Bits is
  generic (g_data_w : integer := 16);
  port (
- a, b : in std_logic_vector (g_data_w - 1 downto 0); -- Entradas
+ a : in std_logic_vector (g_data_w - 1 downto 0);
+ b : in std_logic_vector (g_data_w - 1 downto 0); -- Entradas
+ sr : in std_logic; -- 0 suma 1 resta
  s : out std_logic_vector (g_data_w - 1 downto 0); -- Salida
  co : out std_logic ); -- Acarreo de salida
 
- end Sumador4BitsAN ;
+end entity ;
 
- architecture behavioral of Sumador4BitsAN is
+ architecture behavioral of SumadorRestador16Bits is
  signal s_int : signed (g_data_w downto 0);
  begin -- behavioral
 
- s_int <= signed ('0'& a)+ signed ('0'&b);
+ s_int <= signed ('0'& a)+ signed ('0'&b) when sr = '0'
+          else signed ( a(15) & a) + signed ( b(15) & b);
  s <= std_logic_vector (s_int (g_data_w - 1 downto 0));
  co <= s_int (g_data_w);
 
