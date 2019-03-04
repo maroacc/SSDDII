@@ -21,8 +21,8 @@ end entity ;
  signal s_int : signed (g_data_w downto 0);
  begin -- behavioral
 
- s_int <= signed ('0'& a)+ signed ('0'&b) when sr = '0'
-          else signed ( a(15) & a) + signed ( b(15) & b);
+ s_int <= signed (a(15) & a)+ signed (b(15) & b) when sr = '0'
+          else signed ( a(15) & a) - signed ( b(15) & b);
  s <= std_logic_vector (s_int (g_data_w - 1 downto 0));
  co <= s_int (g_data_w);
 
