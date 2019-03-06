@@ -12,6 +12,7 @@ entity SumadorRestador16Bits is
  a : in std_logic_vector (g_data_w - 1 downto 0);
  b : in std_logic_vector (g_data_w - 1 downto 0); -- Entradas
  sr : in std_logic; -- 0 suma 1 resta
+ z : out std_logic; --Se activa cuando el resultado es 0
  s : out std_logic_vector (g_data_w - 1 downto 0); -- Salida
  co : out std_logic ); -- Acarreo de salida
 
@@ -25,5 +26,8 @@ end entity ;
           else signed ( a(15) & a) - signed ( b(15) & b);
  s <= std_logic_vector (s_int (g_data_w - 1 downto 0));
  co <= s_int (g_data_w);
+ 
+ z <= '0' when s_int = to_signed(0,g_data_w+1) else
+			'1';
 
  end behavioral ;
