@@ -11,8 +11,8 @@ entity UnidadFuncionesLogicas is
   generic(
 		g_data_w : integer := 16);
 	port ( a, b : in std_logic_vector (g_data_w - 1 downto 0);
-		   sel_log : in std_logic_vector (1 downto 0);
-			s : out std_logic_vector (g_data_w - 1 downto 0));
+		   		sel_log : in std_logic_vector (1 downto 0);
+					s : out std_logic_vector (g_data_w - 1 downto 0));
 
 end UnidadFuncionesLogicas;
 

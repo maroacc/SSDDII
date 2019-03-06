@@ -147,9 +147,39 @@ BEGIN
         end if;
 
         if sel = "0100" then
-          assert s= a nand b
-          report "No fuenciona la funcion NAND"
+          assert s = (a nand b)
+          report "No funciona la funcion NAND"
           severity failure;
+        end if;
+
+        if sel = "0101" then
+          assert s = a(3 downto 0) & '0'
+          report "No desplaza a la izquierda"
+          severity failure;
+        end if;
+
+        if sel = "0110" then
+          assert s = a(4) & a(4 downto 1)
+          report "No funciona el desplazamiento aritmetico a la derecha"
+          severity failure;
+        end if;
+
+        if sel = "0111" then
+          assert s = '0' & a(4 downto 1)
+          report "No funciona el desplazamiento a la derecha"
+          severity failure;
+        end if;
+
+        if sel = "1000" then
+          if i < j then
+            assert s = "0000000000000001"
+            report "La salida no es 1 si a es menor que b"
+            severity failure;
+          else
+            assert s = "0000000000000000"
+            report "La salida no es 0 cuando a menor que b"
+            severity failure;
+          end if;
         end if;
 
         end loop;
