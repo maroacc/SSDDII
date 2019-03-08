@@ -172,11 +172,11 @@ BEGIN
 
         if sel = "1000" then
           if i < j then
-            assert s = "0000000000000001"
+            assert s = "00001"
             report "La salida no es 1 si a es menor que b"
             severity failure;
           else
-            assert s = "0000000000000000"
+            assert s = "00000"
             report "La salida no es 0 cuando a menor que b"
             severity failure;
           end if;
